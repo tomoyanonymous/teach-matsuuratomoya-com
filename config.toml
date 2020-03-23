@@ -1,7 +1,7 @@
 baseURL = "https://teach.matsuuratomoya.com"
 languageCode = "ja"
 title = "松浦知也 授業資料置き場"
-theme = 'hugo-book'
+theme = 'book'
 publishDir = "public"
 
 [languages]
