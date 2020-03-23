@@ -1,22 +1,6 @@
 ---
 headless: true
 ---
-
-- [**Example Site**]({{< relref "/docs/example" >}})
-- [Table of Contents]({{< relref "/docs/example/table-of-contents" >}})
-  - [With ToC]({{< relref "/docs/example/table-of-contents/with-toc" >}})
-  - [Without ToC]({{< relref "/docs/example/table-of-contents/without-toc" >}})
-- [Collapsed]({{< relref "/docs/example/collapsed" >}})
-  - [3rd]({{< relref "/docs/example/collapsed/3rd-level" >}})
-    - [4th]({{< relref "/docs/example/collapsed/3rd-level/4th-level" >}})
-<br />
-
-- **Shortcodes**
-- [Buttons]({{< relref "/docs/shortcodes/buttons" >}})
-- [Columns]({{< relref "/docs/shortcodes/columns" >}})
-- [Expand]({{< relref "/docs/shortcodes/expand" >}})
-- [Hints]({{< relref "/docs/shortcodes/hints" >}})
-- [Katex]({{< relref "/docs/shortcodes/katex" >}})
-- [Mermaid]({{< relref "/docs/shortcodes/mermaid" >}})
-- [Tabs]({{< relref "/docs/shortcodes/tabs" >}})
-<br />
+- [**About**]({{< relref "docs/about/index.md">}})
+- [**2020年 福岡女学院大学 「サウンド・デザイン」**]({{< relref "docs/2020/fukujo-sounddesign/_index.md">}})
+- [**License**]({{< relref "docs/license/index.md">}})

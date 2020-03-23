@@ -1,9 +1,14 @@
 baseURL = "https://teach.matsuuratomoya.com"
 languageCode = "ja"
-title = "松浦知也 授業資料置き場"
+title = "松浦知也 授業資料"
 theme = 'book'
 publishDir = "public"
+[markup]
+[markup.goldmark.renderer]
+  unsafe = true
 
+[markup.tableOfContents]
+  startLevel = 1
 [languages]
 [languages.en]
   languageName = 'Japanese'
@@ -36,7 +41,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   
   # (Optional, default none) Set the path to a logo for the book. If the logo is
   # /static/logo.png then the path would be 'logo.png'
-  BookLogo = 'logo.png'
+#   BookLogo = 'logo.png'
   
   # (Optional, default none) Set leaf bundle to render as side menu
   # When not specified file structure and weights will be used
@@ -53,7 +58,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   # Enable 'Edit this page' links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Path must point to 'content' directory of repo.
-  BookEditPath = 'edit/master/exampleSite/content'
+  BookEditPath = 'tree/master/content'
   
   # (Optional, default January 2, 2006) Configure the date format used on the pages
   # - In git information
