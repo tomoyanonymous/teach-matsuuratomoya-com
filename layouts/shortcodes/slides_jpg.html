@@ -1,0 +1,8 @@
+
+{{range $elem_index, $elem_val := ($.Page.Resources.ByType "image")}}
+<h2 id="page {{$elem_index}}">
+    <a href="{{.RelPermalink}}">
+    <img src="{{.RelPermalink}}" alt="">
+</a>
+</h2>
+{{ end }}
