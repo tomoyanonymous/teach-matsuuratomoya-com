@@ -5,4 +5,6 @@ bookToc: false
 bookFlatSection: true
 ---
 
+# License
+
 {{< cc_banner >}}
