@@ -36,7 +36,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
 [params]
   # ogp
   description = "松浦知也の授業資料のWebサイトです。"
-  images = ["site-feature-image.jpg"]
+  images = ["ogp.png"]
   title = "松浦知也 授業資料 / teach.matsuuratomoya.com"
 
   # (Optional, default true) Controls table of contents visibility on right side of pages.
