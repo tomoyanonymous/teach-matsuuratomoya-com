@@ -14,7 +14,7 @@ bookHidden: true
         controls preload="metadata" 
          style="width:100%;">
         <source src="/docs/2020/fukujo-sounddesign/class-1/sounddesign-1.opus">
-        <source src="/docs/2020/fukujo-sounddesign/class-1/sounddesign-1.aac">
+        <source src="/docs/2020/fukujo-sounddesign/class-1/sounddesign-1_fixed.m4a">
             Your browser does not support the
             <code>audio</code> element.
     </audio>
