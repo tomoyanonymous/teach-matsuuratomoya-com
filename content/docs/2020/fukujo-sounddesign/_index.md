@@ -32,7 +32,7 @@ bookCollapseSection: true
 ## 授業計画
 
 1. [オリエンテーション - 自己紹介の録音/ サウンドデザインとは何か？/ 履修上の注意事項の説明](class-1)
-2. 音と物理 / Sound and Physics 紙と銅箔コイルでスピーカーを作るワークショップ
+2. [音を聞き方を考える - 音の言語化、分類 - 聴取体験のレイヤー](class-2)
 3. 音と物理 / Sound and Physics 音が取り得る形態を考える - 振動/電気/溝/数字
 4. 音と計算 / Sound and Computation Puredata入門 - 環境構築、基本操作方法の習得
 5. 音と計算 / Sound and Computation Puredata入門 - 音声ファイルを読み込んで鳴らしてみる/音声じゃないファイルも読み込んで鳴らしてみる
