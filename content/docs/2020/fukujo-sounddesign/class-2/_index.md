@@ -35,6 +35,6 @@ weight: 2
 
 ## スライド
 
-{{< button href="20200430_sounddesign2.pdf">}}スライド（PDF）{{< /button >}}
+{{< button href="20200507_sounddesign2.pdf">}}スライド（PDF）{{< /button >}}
 
 {{< button href="./slides">}}スライド（HTML）{{< /button >}}
