@@ -1,7 +1,7 @@
 ---
 title: 第3週
 date: 2020-05-13
-weight: 3
+bookHidden: true
 ---
 
 
