@@ -34,7 +34,7 @@ bookCollapseSection: true
 1. [オリエンテーション - 自己紹介の録音/ サウンドデザインとは何か？/ 履修上の注意事項の説明](class-1)
 2. [音を聞き方を考える - 音の言語化、分類 - 聴取体験のレイヤー](class-2)
 3. [音と物理 / Sound and Physics 音の形態と基準、クリティカルリスニング](class-3)
-4. 音と計算 / Sound and Computation Puredata入門 - 環境構築、基本操作方法の習得
+4. [音と物理 / Sound and Physics 音を作る方法、録音メディアと音作り](class-4)
 5. 音と計算 / Sound and Computation Puredata入門 - 音声ファイルを読み込んで鳴らしてみる/音声じゃないファイルも読み込んで鳴らしてみる
 6. 音と知覚 / Sound and Cognition 人間が音を聴く仕組みについて知る / Puredataで聴力検査
 7. 音と知覚 / Sound and Cognition  Puredataで錯聴プログラムを作ってみる
