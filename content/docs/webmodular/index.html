@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="/waapisim.js"></script>
+<script type="text/javascript" src="/webmodular_new.js"> 
+</script>
+</head>
+<body onload="Init()">
+<h1>WebModular</h1>
+<select id="patch">
+<option value="clear">Clear All Patch</option>
+<option value="simple">1VCO+1VCA Most Simple Patch</option>
+<option value="basic" selected>2VCO=>1VCF=>1VCA Basic Patch</option>
+<option value="dual">2VCO=>2VCF=>2VCA Dual Channel Patch</option>
+<option value="lfo">LFO Modulation Patch</option>
+<option value="se">Sound Effect Patch</option>
+<option value="ring">Ring Patch</option>
+</select>
+<input type="button" value="Set" onclick="Setup()" />
+<br /><br />
+<div>
+<canvas id="canvas" width="700" height="700" tabindex="1"><input type=button /></canvas>
+</div>
+<form>
+MML:<br />
+<textarea style="width:500px" id="mml" rows=8 cols=80>t150
+e-d-<g-4>g-rg-4e-d-<g-4>g-rg-4e-d-<g-4>g-4<e-4>g-4<d-4>frf4
+e-d-<d-4>frf4e-d-<d-4>frf4e-d-<d-4>f4<e-4>f4<g-4>g-rg-4</textarea>
+<br />
+<button style="width:200px" type="button" onclick="CmdPlay(1)">
+<img src="play.png"/> Play
+</button>
+<button style="width:200px" type="button" onclick="CmdPlay(0)">
+<img src="stop.png"/> Stop
+</button>
+</form>
+<hr />
+<form>
+URL to this song:<br /><textarea onclick="this.select()" id="url" rows=3 cols=80>
+</textarea>
+<br />
+<input type="button" style="width:260px;height:32px" value="Make a URL to this Song" onclick="CmdSave()" />
+<br />
+<br />
+<button type="button" style="width:260px;height:32px" onclick="CmdTweet()">
+<img src="twitter-bird-light-bgs.png" width=20 align="middle"/>
+Share this Song on Twitter
+</button>
+</form>
+<hr />
+<table border="1">
+<tr><td style="color:#a0a0a0">1</td><td colspan=2 style="background:#808080"><b>2</b><br />C#3</td><td colspan=2 style="background:#808080"><b>3</b><br />D#3</td><td colspan=2 style="color:#a0a0a0">4</td><td colspan=2 style="background:#808080"><b>5</b><br />F#3</td><td colspan=2 style="background:#808080"><b>6</b><br />G#3</td><td colspan=2 style="background:#808080"><b>7</b><br />A#3</td><td colspan=2 style="color:#a0a0a0">8</td><td colspan=2 style="background:#808080"><b>9</b><br />C#4</td><td colspan=2 style="background:#808080"><b>0</b><br />D#4</td>
+</tr>
+<tr><td colspan=2><b>Q</b><br /> C3</td><td colspan=2><b>W</b><br /> D3</td><td colspan=2><b>E</b><br />E3</td><td colspan=2><b>R</b><br />F3</td><td colspan=2><b>T</b><br />G3</td><td colspan=2><b>Y</b><br />A3</td><td colspan=2><b>U</b><br />B3</td><td colspan=2><b>I</b><br />C4</td><td colspan=2><b>O</b><br />D4</td><td colspan=2><b>P</b><br />E4</td>
+</tr>
+<tr><td></td></td><td colspan=2 style="color:#a0a0a0">A</td><td colspan=2 style="background:#808080"><b>S</b><br />C#2</td><td colspan=2 style="background:#808080"><b>D</b><br />D#2</td><td colspan=2 style="color:#a0a0a0">F</td><td colspan=2 style="background:#808080"><b>G</b><br />F#2</td><td colspan=2 style="background:#808080"><b>H</b><br />G#2</td><td colspan=2 style="background:#808080"><b>J</b><br />A#2</td><td colspan=2 style="color:#a0a0a0">K</td><td colspan=2 style="background:#808080"><b>L</b><br />C#3</td><td colspan=2 style="background:#808080"><b>;</b><br />D#3</td>
+</tr>
+<tr><td colspan=2></td><td colspan=2><b>Z</b><br />C2</td><td colspan=2><b>X</b><br />D2</td><td colspan=2><b>C</b><br />E2</td><td colspan=2><b>V</b><br />F2</td><td colspan=2><b>B</b><br />G2</td><td colspan=2><b>N</b><br />A2</td><td colspan=2><b>M</b><br />B2</td><td colspan=2><b>,</b><br />C3</td><td colspan=2><b>.</b><br />D3</td><td colspan=2>/</td>
+</tr>
+</table>
+<hr />
+<img id="panel" src="./panel.png" height=0/><br />
+<img id="knob" src="./knob.png" height=0 /><br />
+<img id="knob2" src="./knob2.png" height=0 /><br />
+<img id="knob3" src="./knob3.png" height=0 /><br />
+<img id="sw2" src="./sw2.png" height=0 /><br />
+<img id="sw3" src="./sw3.png" height=0 /><br />
+<img id="sw5" src="./sw5.png" height=0 /><br />
+<img id="slider" src="./sliderpos.png" height=0 /><br />
+<img id="keypress" src="./keypress.png" height=0 /><br />
+
+<script>
+    window.addEventListener("load",Init);
+</script>
+</body>
+</html>
