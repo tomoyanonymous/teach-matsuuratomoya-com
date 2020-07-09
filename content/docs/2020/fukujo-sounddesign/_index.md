@@ -35,18 +35,18 @@ bookCollapseSection: true
 2. [音を聞き方を考える - 音の言語化、分類 - 聴取体験のレイヤー](class-2)
 3. [音と物理 / Sound and Physics 音の形態と基準、クリティカルリスニング](class-3)
 4. [音と物理 / Sound and Physics 音を作る方法、録音メディアと音作り](class-4)
-4. [音と物理 / Sound and Physics 音を作る方法、シンセサイザー](class-5)
-5. 音と計算 / Sound and Computation Puredata入門 - 音声ファイルを読み込んで鳴らしてみる/音声じゃないファイルも読み込んで鳴らしてみる
-6. 音と知覚 / Sound and Cognition 人間が音を聴く仕組みについて知る / Puredataで聴力検査
-7. 音と知覚 / Sound and Cognition  Puredataで錯聴プログラムを作ってみる
-8. 音と本物らしさ / Sound and Fidelity 音声ファイル読み込み再訪 / DJごっこ / マイクから録音してみる
-9. 音と本物らしさ / Sound and Fidelity 空間としての音を考える / ステレオフォニックを作ってみる
-10. 音と本物らしさ / Sound and Fidelity 仕組みの模倣から音を作る / シミュレーションとモデリング、リバースエンジニアリング / 人工音を作る / 自然の音を作る
-11. 音と機能 Sound and Function  「合ってない」音を探し、自分で作り直してみる1
-12. 音と機能 Sound and Function  「合ってない」音を探し、自分で作り直してみる2
-13. 音と物語 Sound and Narrative オーディオ・ドラマを聞いてみる　長い時間の取り扱いを考える
-14. 作品制作(必要に応じて具体的なアドバイスを受け、個々の表現に必要な知識を学習する)
-15. 作品発表、授業のまとめ
+5. [音と物理 / Sound and Physics 音を作る方法、シンセサイザー](class-5)
+6. [音と計算 / Sound and Computation エフェクター100本ノック！](class-6)
+7. 音と本物らしさ / Sound and Fidelity 仕組みの模倣から音を作る / シミュレーションとモデリング、リバースエンジニアリング / 人工音を作る / 自然の音を作る
+8. 音と知覚 / Sound and Cognition 人間が音を聴く仕組みについて知る / Puredataで聴力検査
+9. 音と知覚 / Sound and Cognition  Puredataで錯聴プログラムを作ってみる
+10. 音と本物らしさ / Sound and Fidelity　フォーリー、アンビエンス、ミックス
+11. 音と本物らしさ / Sound and Fidelity　音と空間
+12. 音と計算 / Sound and Computation 音とコンピューター
+13. 音と機能 Sound and Function  
+14. 音と機能 Sound and Function  
+15. 音と物語 Sound and Narrative 
+
 
 ## 参考文献
 
