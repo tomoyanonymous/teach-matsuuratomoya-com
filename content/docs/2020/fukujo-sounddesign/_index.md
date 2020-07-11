@@ -37,7 +37,7 @@ bookCollapseSection: true
 4. [音と物理 / Sound and Physics 音を作る方法、録音メディアと音作り](class-4)
 5. [音と物理 / Sound and Physics 音を作る方法、シンセサイザー](class-5)
 6. [音と計算 / Sound and Computation エフェクター100本ノック！](class-6)
-7. 音と本物らしさ / Sound and Fidelity 仕組みの模倣から音を作る / シミュレーションとモデリング、リバースエンジニアリング / 人工音を作る / 自然の音を作る
+7. [音と本物らしさ / Sound and Fidelity 仕組みの模倣から音を作る](class-7)
 8. 音と知覚 / Sound and Cognition 人間が音を聴く仕組みについて知る / Puredataで聴力検査
 9. 音と知覚 / Sound and Cognition  Puredataで錯聴プログラムを作ってみる
 10. 音と本物らしさ / Sound and Fidelity　フォーリー、アンビエンス、ミックス
