@@ -38,10 +38,10 @@ bookCollapseSection: true
 5. [音と物理 / Sound and Physics 音を作る方法、シンセサイザー](class-5)
 6. [音と計算 / Sound and Computation エフェクター100本ノック！](class-6)
 7. [音と本物らしさ / Sound and Fidelity 仕組みの模倣から音を作る](class-7)
-8. 音と知覚 / Sound and Cognition 人間が音を聴く仕組みについて知る / Puredataで聴力検査
-9. 音と知覚 / Sound and Cognition  Puredataで錯聴プログラムを作ってみる
-10. 音と本物らしさ / Sound and Fidelity　フォーリー、アンビエンス、ミックス
-11. 音と本物らしさ / Sound and Fidelity　音と空間
+8. [音と知覚 / Sound and Cognition 人間が音を聴く仕組みについて知る](class-8)
+9. [音と知覚 / Sound and Cognition  錯聴から考える音の認知](class-9)
+10. [音と知覚、音と本物らしさ / Sound, Cognition and Fidelity　空間と音](class-10)
+11. [音と本物らしさ、機能 / Sound, Fidelity and Function 映像音響の実際の仕事](class-11)
 12. 音と計算 / Sound and Computation 音とコンピューター
 13. 音と機能 Sound and Function  
 14. 音と機能 Sound and Function  
