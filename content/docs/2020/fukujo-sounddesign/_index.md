@@ -42,21 +42,36 @@ bookCollapseSection: true
 9. [音と知覚 / Sound and Cognition  錯聴から考える音の認知](class-9)
 10. [音と知覚、音と本物らしさ / Sound, Cognition and Fidelity　空間と音](class-10)
 11. [音と本物らしさ、機能 / Sound, Fidelity and Function 映像音響の実際の仕事](class-11)
-12. 音と計算 / Sound and Computation 音とコンピューター
-13. 音と機能 Sound and Function  
-14. 音と機能 Sound and Function  
-15. 音と物語 Sound and Narrative 
+12. [音と計算 / Sound and Computation コンピューターにおける音、ゲーム、インタラクティブ性](class-12)
+13. [音と機能 Sound and Function コミュニケーション手段としての音](class-13)
+14. [音と物語 Sound and Narrative 音と物語、フィクション、体験設計](class-14)
+15. [総まとめ、未来のサウンドデザイン](class-15)
 
 
 ## 参考文献
 
-- Designing Sound, Andy Farnell, The MIT Press, 2010, ISBN-13: 978-0262290203
+### 日本語
+
 - 「PureData」ではじめるサウンド・プログラミング―「音」「映像」のための「ビジュアル・プログラミング」言語, 中村 隆之, I・O BOOKS , 2015, 978-4777518821
 - Pd Recipe Book -Pure Dataではじめるサウンドプログラミング, 松村 誠一郎, 2012, BNN新社, 978-4861007804
-- Sound Design 映画を響かせる「音」のつくり方, デイヴィッド・ゾンネンシャイン/シカ・マッケンジー(訳), 2015,フィルムアート社,978-4845915651 
 - 聞こえくる過去, ジョナサン・スターン (著)/中川克志 (翻訳)/金子智太郎 (翻訳)/谷口文和 (翻訳), 2015, インスクリプト, 978-4900997585
 - 音響メディア史 (メディアの未来05), 谷口文和/中川克志/福田裕大, 2015, ナカニシヤ出版 , 978-4779509513
+- ポスト・テクノ（ロジー）ミュージック ー拡散する〈音楽〉、解体する〈人間〉,久保田晃弘監修,2001,大村書店,4-7563-2026-0
+- Handmade Electronic Music 手作り電子回路から生まれる音と音楽,Nicolas Collins著/久保田晃弘監訳/船田巧訳,2013,オライリー・ジャパン,978-4-87311-595-5
+- チップチューンのすべて All About Chiptune ゲーム機から生まれた新しい音楽, 田中治久(hally),2017,誠文堂新光社,978-4-416-61621-5
+- エレベーター・ミュージック・イン・ジャパン 日本のBGMの歴史,田中雄二, 2018,DU BOOKS,978-4866470566
+- 未来の〈サウンド〉が聞こえる 電子楽器に夢を託したパイオニアたち, マーク・ブレンド/ヲノサトル(訳), 2018, アルテスパブリッシング,978-4865591910
+- Sound Design 映画を響かせる「音」のつくり方, デイヴィッド・ゾンネンシャイン/シカ・マッケンジー(訳), 2015,フィルムアート社,978-4845915651 
+
+### 英語
+
+- Designing Sound, Andy Farnell, The MIT Press, 2010, ISBN-13: 978-0262290203
+- Foundations in Sound Design for Interactive Media, Michael Filimowicz編,Routeledge,2019,978-1138093942
+- Designing with Sound: Fundamentals for Products and Services, Amber Case&Aaron Day, 2018, O'Reilly Media,978-1491961100
+
 
 ## 連絡先
+
+連絡の際は氏名、受講生の場合は受講年度などを添えて連絡してください。
 
 teach\[at\]matsuuratomoya.com
