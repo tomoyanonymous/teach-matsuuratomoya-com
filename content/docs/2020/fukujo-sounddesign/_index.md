@@ -1,5 +1,5 @@
 ---
-title: 福岡女学院大学 「サウンド・デザイン」
+title: 2020年度 福岡女学院大学 「サウンド・デザイン」
 weight: 1
 bookCollapseSection: true
 ---
@@ -7,7 +7,7 @@ bookCollapseSection: true
 
 木曜2時限目
 
-講師:松浦知也
+講師:[松浦知也](https://matsuuratomoya.com)
 
 ## 授業内容
 
@@ -20,6 +20,7 @@ bookCollapseSection: true
 また各トピックにおいてオープンソースのサウンドプログラミング環境「Puredata」を用いて音を構築する方法を実践的に学ぶ。
 
 ## 授業の概要
+
 初回は授業のオリエンテーションとし、それ以降は以下6つのトピックを各2~3コマを目安に取り上げる。
 
 1. 音と物理 / Sound and Physics - 物理現象としての音とはそもそも何なのかについて学ぶ。
