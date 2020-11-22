@@ -19,6 +19,12 @@ bookCollapseSection: true
 
 **[Pure Dataのインストール方法:2020年版](howtoinstall-pd)** （[PDF](howtoinstall-pd/howtoinstall-pd.pdf)）
 
+## 講義資料
+
+**[Pure Data入門 基本操作](pd-intro)** （[PDF](pd-intro/20201122-pd-introduction.pdf)）
+
+**[サンプルパッチ(zipフォルダ)](./sample_patch.zip)**
+
 ## 連絡先
 
 連絡の際は氏名、所属などを添えて連絡してください。
