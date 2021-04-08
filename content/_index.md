@@ -32,3 +32,10 @@ type: docs
 ## [2020年度](/docs/2020)
 
 ### [福岡女学院大学 「サウンド・デザイン」](/docs/2020/fukujo-sounddesign)
+
+### [日本音響学会九州支部 アコースティックブートキャンプ(ABC-Q) Puredataワークショップ](/docs/2020/ABC-Q)
+
+## [2021年度](/docs/2021)
+
+### [福岡女学院大学 「サウンド・デザイン」](/docs/2021/fukujo-sounddesign)
+
