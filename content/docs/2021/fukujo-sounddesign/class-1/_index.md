@@ -9,9 +9,9 @@ weight: 1
 
 ## スライド
 
-<!--
-{{< button href="20200430_sounddesign1.pdf">}}スライド（PDF）{{< /button >}}
+
+
+{{< button href="20210415_sounddesign1.pdf">}}スライド（PDF）{{< /button >}}
 
 {{< button href="./slides">}}スライド（HTML）{{< /button >}}
 
--->
