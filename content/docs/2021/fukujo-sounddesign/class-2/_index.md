@@ -1,7 +1,7 @@
 ---
-title: 第1週
-date: 2021-04-07
-weight: 1
+title: 第2週
+date: 2021-04-21
+weight: 2
 ---
 
 
@@ -11,7 +11,7 @@ weight: 1
 
 
 
-{{< button href="20210415_sounddesign1.pdf">}}スライド（PDF）{{< /button >}}
+{{< button href="20210422_sounddesign2.pdf">}}スライド（PDF）{{< /button >}}
 
 {{< button href="./slides">}}スライド（HTML）{{< /button >}}
 
