@@ -1,0 +1,50 @@
+#N canvas 172 108 559 553 12;
+#X obj 40 29 receive~ \$0feedback;
+#X obj 31 479 send~ \$0feedback;
+#X obj 235 33 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 187 28 adc~;
+#X obj 187 52 *~;
+#X obj 123 111 bng 15 250 50 0 empty empty Trigger_rec&play 17 7 0
+10 -262144 -1 -1;
+#X obj 224 139 bng 15 250 50 0 empty empty clear_array 17 7 0 10 -262144
+-1 -1;
+#X obj 228 203 delwrite~ \$0vib 44000;
+#X obj 228 228 osc~ 0.4;
+#X obj 228 252 +~ 1;
+#X obj 228 276 *~ 20;
+#X obj 228 300 delread4~ \$0vib;
+#X obj 274 333 hsl 128 15 0 1 0 0 empty empty Vibrato_volume -2 -8
+0 10 -262144 -1 -1 9300 1;
+#X obj 231 352 *~;
+#X obj 83 332 hsl 128 15 0 1 0 0 empty empty Dry_volume -2 -8 0 10
+-262144 -1 -1 10400 1;
+#X obj 35 351 *~;
+#X obj 262 432 hsl 128 15 0 1 0 0 empty empty playback_volume -2 -8
+0 10 -262144 -1 -1 11900 1;
+#X obj 209 451 *~;
+#X obj 207 481 dac~;
+#X obj 36 159 ISRmodule_varispeed 96000;
+#X floatatom 249 111 5 0 0 1 playback_rate - -;
+#X connect 0 0 19 0;
+#X connect 2 0 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 19 0;
+#X connect 5 0 19 1;
+#X connect 6 0 19 3;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 1;
+#X connect 13 0 17 0;
+#X connect 13 0 1 0;
+#X connect 14 0 15 1;
+#X connect 15 0 17 0;
+#X connect 15 0 1 0;
+#X connect 16 0 17 1;
+#X connect 17 0 18 0;
+#X connect 17 0 18 1;
+#X connect 19 0 7 0;
+#X connect 19 0 15 0;
+#X connect 20 0 19 2;

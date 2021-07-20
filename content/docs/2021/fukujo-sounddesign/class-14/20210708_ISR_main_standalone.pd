@@ -1,0 +1,112 @@
+#N canvas 775 23 873 1011 12;
+#X obj 40 29 receive~ \$0feedback;
+#X obj 24 860 send~ \$0feedback;
+#X obj 235 33 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 25000 1;
+#X obj 187 28 adc~;
+#X obj 187 52 *~;
+#X obj 203 115 bng 15 250 50 0 empty empty Trigger_rec&play 17 7 0
+10 -262144 -1 -1;
+#X obj 339 124 bng 15 250 50 0 empty empty clear_array 17 7 0 10 -262144
+-1 -1;
+#X obj 221 584 delwrite~ \$0vib 44000;
+#X obj 221 609 osc~ 0.4;
+#X obj 221 633 +~ 1;
+#X obj 221 657 *~ 20;
+#X obj 221 681 delread4~ \$0vib;
+#X obj 267 714 hsl 128 15 0 1 0 0 empty empty Vibrato_volume -2 -8
+0 10 -262144 -1 -1 9800 1;
+#X obj 224 733 *~;
+#X obj 76 713 hsl 128 15 0 1 0 0 empty empty Dry_volume -2 -8 0 10
+-262144 -1 -1 17300 1;
+#X obj 28 732 *~;
+#X obj 255 813 hsl 128 15 0 1 0 0 empty empty playback_volume -2 -8
+0 10 -262144 -1 -1 14700 1;
+#X obj 202 832 *~;
+#X obj 200 862 dac~;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0array1 96000 float 2;
+#X coords 0 1 96000 -1 200 140 1 0 0;
+#X restore 430 37 graph;
+#N canvas 0 23 450 278 (subpatch) 0;
+#X array \$0array2 96000 float 2;
+#X coords 0 1 96000 -1 200 140 1 0 0;
+#X restore 429 197 graph;
+#X obj 36 265 tabwrite~;
+#X obj 151 234 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 297 411 10 0 0 0 - - -;
+#X text 296 391 Cmd+3;
+#X obj 40 386 tabplay~;
+#X obj 135 367 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 255 168 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 255 192 sel 0 1;
+#X obj 255 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 288 228 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 205 177 t b b;
+#X obj 297 317 loadbang;
+#X obj 295 361 f \$1;
+#X obj 299 537 send \$0array2;
+#X msg 298 447 resize \$1;
+#X obj 449 534 send \$0array1;
+#X obj 449 356 f \$0;
+#X floatatom 449 400 5 0 0 1 Instance_ID - -;
+#X obj 149 271 symbol \$0array1;
+#X obj 161 298 symbol \$0array2;
+#X obj 70 204 symbol \$0array1;
+#X obj 50 175 symbol \$0array2;
+#X msg 40 349 set \$1;
+#X msg 44 232 set \$1;
+#X msg 461 492 const 0;
+#X connect 0 0 21 0;
+#X connect 2 0 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 21 0;
+#X connect 5 0 31 0;
+#X connect 6 0 45 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 1;
+#X connect 13 0 17 0;
+#X connect 13 0 1 0;
+#X connect 14 0 15 1;
+#X connect 15 0 17 0;
+#X connect 15 0 1 0;
+#X connect 16 0 17 1;
+#X connect 17 0 18 0;
+#X connect 17 0 18 1;
+#X connect 22 0 21 0;
+#X connect 23 0 35 0;
+#X connect 25 0 15 0;
+#X connect 25 0 7 0;
+#X connect 26 0 25 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 28 1 30 0;
+#X connect 29 0 39 0;
+#X connect 29 0 42 0;
+#X connect 30 0 40 0;
+#X connect 30 0 41 0;
+#X connect 31 0 22 0;
+#X connect 31 0 26 0;
+#X connect 31 1 27 0;
+#X connect 32 0 33 0;
+#X connect 32 0 37 0;
+#X connect 33 0 23 0;
+#X connect 35 0 34 0;
+#X connect 35 0 36 0;
+#X connect 37 0 38 0;
+#X connect 39 0 43 0;
+#X connect 40 0 43 0;
+#X connect 41 0 44 0;
+#X connect 42 0 44 0;
+#X connect 43 0 25 0;
+#X connect 44 0 21 0;
+#X connect 45 0 36 0;
+#X connect 45 0 34 0;

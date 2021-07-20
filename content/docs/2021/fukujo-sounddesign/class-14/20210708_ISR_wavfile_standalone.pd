@@ -1,0 +1,127 @@
+#N canvas 774 23 873 1011 12;
+#X obj 40 29 receive~ \$0feedback;
+#X obj 24 860 send~ \$0feedback;
+#X obj 203 115 bng 15 250 50 0 empty empty Trigger_rec&play 17 7 0
+10 -262144 -1 -1;
+#X obj 339 124 bng 15 250 50 0 empty empty clear_array 17 7 0 10 -262144
+-1 -1;
+#X obj 221 584 delwrite~ \$0vib 44000;
+#X obj 221 609 osc~ 0.4;
+#X obj 221 633 +~ 1;
+#X obj 221 657 *~ 20;
+#X obj 221 681 delread4~ \$0vib;
+#X obj 267 714 hsl 128 15 0 1 0 0 empty empty Vibrato_volume -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 224 733 *~;
+#X obj 76 713 hsl 128 15 0 1 0 0 empty empty Dry_volume -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 28 732 *~;
+#X obj 255 813 hsl 128 15 0 1 0 0 empty empty playback_volume -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 202 832 *~;
+#X obj 200 862 dac~;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0array1 1 float 2;
+#X coords 0 1 1 -1 200 140 1 0 0;
+#X restore 605 422 graph;
+#N canvas 0 23 450 278 (subpatch) 0;
+#X array \$0array2 1 float 2;
+#X coords 0 1 1 -1 200 140 1 0 0;
+#X restore 596 577 graph;
+#X obj 36 265 tabwrite~;
+#X obj 151 234 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 297 411 10 0 0 0 - - -;
+#X text 296 391 Cmd+3;
+#X obj 40 386 tabplay~;
+#X obj 135 367 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 255 168 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 255 192 sel 0 1;
+#X obj 255 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 288 228 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 205 177 t b b;
+#X obj 297 317 loadbang;
+#X obj 295 361 f \$1;
+#X obj 299 537 send \$0array2;
+#X msg 298 447 resize \$1;
+#X obj 449 534 send \$0array1;
+#X obj 449 356 f \$0;
+#X floatatom 449 400 5 0 0 1 Instance_ID - -;
+#X obj 149 271 symbol \$0array1;
+#X obj 161 298 symbol \$0array2;
+#X obj 70 204 symbol \$0array1;
+#X obj 50 175 symbol \$0array2;
+#X msg 40 349 set \$1;
+#X msg 44 232 set \$1;
+#X msg 461 492 const 0;
+#X obj 295 58 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 181 91 *~;
+#X obj 200 59 tabplay~ wav;
+#X obj 201 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array wav 8.93136e+06 float 2;
+#X coords 0 1 8.93136e+06 -1 200 140 1;
+#X restore 611 209 graph;
+#X obj 612 165 soundfiler;
+#X obj 613 94 openpanel;
+#X obj 615 70 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 614 134 read -resize \$1 wav;
+#X connect 0 0 18 0;
+#X connect 2 0 28 0;
+#X connect 3 0 42 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 1;
+#X connect 10 0 14 0;
+#X connect 10 0 1 0;
+#X connect 11 0 12 1;
+#X connect 12 0 14 0;
+#X connect 12 0 1 0;
+#X connect 13 0 14 1;
+#X connect 14 0 15 0;
+#X connect 14 0 15 1;
+#X connect 19 0 18 0;
+#X connect 20 0 32 0;
+#X connect 22 0 12 0;
+#X connect 22 0 4 0;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 25 1 27 0;
+#X connect 26 0 36 0;
+#X connect 26 0 39 0;
+#X connect 27 0 37 0;
+#X connect 27 0 38 0;
+#X connect 28 0 19 0;
+#X connect 28 0 23 0;
+#X connect 28 1 24 0;
+#X connect 29 0 30 0;
+#X connect 29 0 34 0;
+#X connect 30 0 20 0;
+#X connect 32 0 31 0;
+#X connect 32 0 33 0;
+#X connect 34 0 35 0;
+#X connect 36 0 40 0;
+#X connect 37 0 40 0;
+#X connect 38 0 41 0;
+#X connect 39 0 41 0;
+#X connect 40 0 22 0;
+#X connect 41 0 18 0;
+#X connect 42 0 33 0;
+#X connect 42 0 31 0;
+#X connect 43 0 44 1;
+#X connect 44 0 18 0;
+#X connect 45 0 44 0;
+#X connect 46 0 45 0;
+#X connect 49 0 51 0;
+#X connect 50 0 49 0;
+#X connect 51 0 48 0;
