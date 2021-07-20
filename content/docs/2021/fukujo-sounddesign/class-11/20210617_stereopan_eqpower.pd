@@ -1,0 +1,76 @@
+#N canvas 46 408 1725 1022 12;
+#X obj 346 66 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12000 1;
+#X obj 682 172 / 2;
+#X obj 477 313 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 17166 1;
+#X obj 649 317 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 18720 1;
+#X obj 807 283 pow 2;
+#X floatatom 807 307 5 0 0 0 - - -;
+#X obj 937 284 pow 2;
+#X floatatom 937 308 5 0 0 0 - - -;
+#X obj 855 346 +;
+#X floatatom 855 370 5 0 0 0 - - -;
+#X obj 680 195 t f f;
+#X obj 682 140 * 3.1416;
+#X obj 402 355 *~;
+#X obj 542 358 *~;
+#X obj 525 151 != 1;
+#X obj 118 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 462 210 *~;
+#X obj 35 187 *~;
+#X obj 462 175 noise~;
+#X obj 31 154 noise~;
+#X obj 39 340 *~;
+#X obj 180 343 *~;
+#X obj 189 268 -;
+#X obj 52 304 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12000 1;
+#X obj 197 304 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 13400 1;
+#X text 339 33 pan L~R;
+#X msg 190 241 1;
+#X obj 170 199 t f b f;
+#X obj 676 238 sin;
+#X obj 788 239 cos;
+#X text 54 36 1:Linear or 0:Power;
+#X obj 192 420 else/output~;
+#X connect 0 0 11 0;
+#X connect 0 0 27 0;
+#X connect 1 0 10 0;
+#X connect 2 0 12 1;
+#X connect 3 0 13 1;
+#X connect 4 0 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 1;
+#X connect 8 0 9 0;
+#X connect 10 0 28 0;
+#X connect 10 1 29 0;
+#X connect 11 0 1 0;
+#X connect 12 0 31 0;
+#X connect 13 0 31 1;
+#X connect 14 0 16 1;
+#X connect 15 0 14 0;
+#X connect 15 0 17 1;
+#X connect 16 0 12 0;
+#X connect 16 0 13 0;
+#X connect 17 0 21 0;
+#X connect 17 0 20 0;
+#X connect 18 0 16 0;
+#X connect 19 0 17 0;
+#X connect 20 0 31 0;
+#X connect 21 0 31 1;
+#X connect 22 0 24 0;
+#X connect 23 0 20 1;
+#X connect 24 0 21 1;
+#X connect 26 0 22 0;
+#X connect 27 0 23 0;
+#X connect 27 1 26 0;
+#X connect 27 2 22 1;
+#X connect 28 0 2 0;
+#X connect 28 0 4 0;
+#X connect 29 0 3 0;
+#X connect 29 0 6 0;

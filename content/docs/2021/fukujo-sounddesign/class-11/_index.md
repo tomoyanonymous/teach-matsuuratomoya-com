@@ -14,3 +14,4 @@ weight: 11
 
 {{< button href="./slides">}}スライド（HTML）{{< /button >}}
 
+{{< button href="./20210617_stereopan_eqpower.pd">}}ステレオ等価パワーパンナー　サンプルパッチ{{< /button >}}
