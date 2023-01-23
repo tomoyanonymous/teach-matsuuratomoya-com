@@ -9,9 +9,10 @@ type: docs
 
 過去に行った講義の資料を可能な範囲で公開しています。
 
-このWebサイト『<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">teach.matsuuratomoya.com</span>』(及びアップロードされているスライドの画像や音声講義ファイル)は<a xmlns:cc="http://creativecommons.org/ns#" href="teach.matsuura.com" property="cc:attributionName" rel="cc:attributionURL">松浦 知也</a>の著作権の元、 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際 ライセンス</a>で提供されています。
+このWebサイト『teach.matsuuratomoya.com』(及びアップロードされているスライドの画像や音声講義ファイル)は松浦知也の著作権の元、 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際 ライセンス</a>で提供されています。
 
-資料に間違いがあるなどの連絡は teach\[at\]matsuuratomoya.com　までよろしくお願いします。
+質問などがある場合は、teach\[at\]matsuuratomoya.com までメールで連絡をするか、[GitHubのリポジトリ](https://github.com/tomoyanonymous/teach-matsuuratomoya-com)にIssueやPull Requestでお知らせください。
+
 
 # プロフィール
 
@@ -23,11 +24,19 @@ type: docs
 
 近年の活動は電子音響楽器「Exidiophone」の制作とそれを用いた演奏活動、音楽プログラミング言語「mimium」の設計、開発(2019年度未踏IT人材発掘・育成事業採択、また2020年度同事業スーパークリエータ認定)など。
 
-1994年生。2017年東京藝術大学 音楽学部音楽環境創造科卒業、2019年九州大学 大学院芸術工学府 修士課程修了。2018年School for Poetic Computation留学。2019年より同大学院博士後期課程在籍。
+1994年生。2017年東京藝術大学 音楽学部音楽環境創造科卒業、2019年九州大学 大学院芸術工学府 修士課程修了。2018年School for Poetic Computation留学。2019年同大学院博士後期課程修了。博士（芸術工学）。
+
+2022年より[東京藝術大学芸術情報センター（AMC）](https://amc.geidai.ac.jp/lab/)特任助教。
 
 2020年度より福岡女学院大学「サウンド・デザイン」の授業をはじめ教育活動も取り組む。
 
 個人WebSite : <https://matsuuratomoya.com>
+
+Researchmap: <https://researchmap.jp/matsuuratomoya>
+
+## [2022年度](/docs/2022)
+
+### [福岡女学院大学 「サウンド・デザイン」(夏季集中講義)](/docs/2022/fukujo-sounddesign)
 
 ## [2021年度](/docs/2021)
 

@@ -1,6 +1,6 @@
 ---
 title: License
-weight: 3
+weight: 4
 bookToc: false
 bookFlatSection: true
 ---
