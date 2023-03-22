@@ -34,6 +34,17 @@ type: docs
 
 Researchmap: <https://researchmap.jp/matsuuratomoya>
 
+<a href="https://researchmap.jp" class="researchmap-widget" data-widget-type="select" data-widget-user-id="R000030767"  data-widget-language="Japanese"  data-widget-template-id="4" ></a>
+<script src="https://researchmap.jp/widgets/js/widget_api.js"></script>
+
+## [2023年度](/docs/2023)
+
+### [2023年　東京藝術大学 芸術情報センター開設科目　「コードとデザイン」（前期　金曜4・5限）](/docs/2023/code-design)
+
+### [2023年　東京藝術大学 芸術情報センター開設科目　「メディアアート・プログラミングII」（後期　金曜4限）](/docs/2023/mediaart-programming2)
+
+### [福岡女学院大学 「サウンド・デザイン」(夏季集中講義)](/docs/2022/fukujo-sounddesign)
+
 ## [2022年度](/docs/2022)
 
 ### [福岡女学院大学 「サウンド・デザイン」(夏季集中講義)](/docs/2022/fukujo-sounddesign)

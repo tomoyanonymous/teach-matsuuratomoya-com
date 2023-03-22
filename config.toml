@@ -1,5 +1,6 @@
 baseURL = "https://teach.matsuuratomoya.com"
 languageCode = "ja"
+defaultContentLanguage = 'ja'
 title = "松浦知也 授業資料"
 theme = 'book'
 publishDir = "public"
@@ -9,11 +10,18 @@ publishDir = "public"
 
 [markup.tableOfContents]
   startLevel = 1
+  
+contentDir = 'content'
 [languages]
-[languages.en]
+[languages.ja]
   languageName = 'Japanese'
-  contentDir = 'content'
   weight = 1
+[languages.en]
+  languageName = 'English'
+  weight = 2
+  title = "Classes by Matsuura Tomoya"
+
+  
 # (Optional) Set Google Analytics if you use it to track your website.
 # Always put it on the top of the configuration file, otherwise it won't work
 # googleAnalytics = "UA-XXXXXXXXX-X"
