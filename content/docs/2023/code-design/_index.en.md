@@ -33,7 +33,7 @@ In addition, by learning how to convert data and materials into each other throu
 
 (This is the first year of the class thus the content may change according to the progress.)
 
-1. (4/7) Introduction: Computing without Electricity
+1. [(4/7) Introduction: Computing without Electricity](./1)
 2. (4/14) Introduction to Electronics (Victorian Oscillator)
 3. (4/21) Paper Circuit and Logic Circuits
 4. (4/28) Binary Numbers WS 
