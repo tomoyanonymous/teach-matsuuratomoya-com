@@ -10,5 +10,11 @@ weight: 1
 
 {{< button href="2023-code-and-design-1.pdf">}}スライド（PDF）{{< /button >}}
 
-{{< button href="./slides">}}スライド（HTML）{{< /button >}}
+{{< button href="slides">}}スライド（HTML）{{< /button >}}
+
+## 参考文献
+
+<https://www.conditionaldesign.org/>
+
+
 
