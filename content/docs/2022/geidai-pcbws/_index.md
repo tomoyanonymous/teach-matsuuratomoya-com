@@ -13,6 +13,8 @@ bookCollapseSection: true
 
 {{< button href="20220726_pcbetching.pdf">}}スライド（PDF）{{< /button >}}
 
+{{< button href="slides">}}スライド（HTML）{{< /button >}}
+
 
 以下、開催時の募集情報
 
