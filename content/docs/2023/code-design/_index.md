@@ -36,7 +36,7 @@ bookCollapseSection: true
 
 1. [(4/7) イントロダクション 電気を使わないコンピューティング](./1)
 2. [(4/14) 電子工作脱入門（Victorian Oscillator）](./2)
-3. (4/21) Paper Circuitと論理回路
+3. [(4/21) Paper Circuitと論理回路](./3)
 4. (4/28) 二進数WS
 5. (5/12) Handmade Computer
 6. (5/19) ソフトウェアとアルゴリズムーArduinoを使ってみよう
