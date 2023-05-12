@@ -1,6 +1,6 @@
 ---
-title: "Code and Design 2023 class 1 Slides"
-date: 2023-04-08
+title: "Code and Design 2023 class 3 Slides"
+date: 2023-04-28
 bookHidden: true
 ---
 

@@ -36,8 +36,8 @@ In addition, by learning how to convert data and materials into each other throu
 1. [(4/7) Introduction: Computing without Electricity](./1)
 2. [(4/14) Anti-Introduction to Electronics (Victorian Oscillator)](./2)
 3. [(4/21) Paper Circuit and Logic Circuits](./3)
-4. (4/28) Binary Numbers WS 
-5. (5/12) Handmade Computer
+4. [(4/28) Binary Numbers WS ](./4)
+5. [(5/12) Handmade Computer(DIWO Full Adder)](./5)
 6. (5/19) Software and Algorithm - Let's try using Arduino
 7. (5/26) Considering Inputs (Switches, Handmade Resistors)
 8. (6/2) Considering Output (motor, solenoid, relay)
