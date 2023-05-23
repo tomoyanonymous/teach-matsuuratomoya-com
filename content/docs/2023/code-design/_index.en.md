@@ -52,17 +52,17 @@ In addition, by learning how to convert data and materials into each other throu
 
 ## Reference Books
 
-"Code as Creative Medium A Handbook for Computational Art and Design", (2021) by Golan Levin and Tega Brain, MIT Press.
-"Handmade Electronic Music - The Art of Hardware Hacking, 3rd Edition" (2020) by Nicolas Collins, Routledge.
-"Getting Started with Arduino, 3rd Edition" (2014), by Massimo Banzi and Michael Shiloh, Make: Community
-"Making Things Move"(2011), by Dustyn Roberts ,O'Reilly Verlag
+- "Code as Creative Medium A Handbook for Computational Art and Design", (2021) by Golan Levin and Tega Brain, MIT Press.
+- "Handmade Electronic Music - The Art of Hardware Hacking, 3rd Edition" (2020) by Nicolas Collins, Routledge.
+- "Getting Started with Arduino, 3rd Edition" (2014), by Massimo Banzi and Michael Shiloh, Make: Community
+- "Making Things Move"(2011), by Dustyn Roberts ,O'Reilly Verlag
 
 // translated books into Japanese.
 
-「Code as Creative Medium 創造的なプログラミング教育のための実践ガイドブック」(2022) ゴラン・レヴィン 、 テガ・ブレイン著 澤村正樹 、 杉本達應 、 米田研一　訳、BNN
-「Arduinoをはじめよう 第4版」(2015) Massimo Banzi、Michael Shiloh　著、船田 巧　訳、オライリー
-「Handmade Electronic Music ―手作り電子回路から生まれる音と音楽 (Make: PROJECTS) 」(2013)Nicolas Collins 著、 久保田 晃弘 監訳、 船田 巧 訳、オライリー
-「Making Things Move ―動くモノを作るためのメカニズムと材料の基本 (Make: PROJECTS) 」（2012）Dustyn Roberts 著、 岩崎 修 監修、 金井 哲夫 訳、オライリー
+- 「Code as Creative Medium 創造的なプログラミング教育のための実践ガイドブック」(2022) ゴラン・レヴィン 、 テガ・ブレイン著 澤村正樹 、 杉本達應 、 米田研一　訳、BNN
+- 「Arduinoをはじめよう 第4版」(2015) Massimo Banzi、Michael Shiloh　著、船田 巧　訳、オライリー
+- 「Handmade Electronic Music ―手作り電子回路から生まれる音と音楽 (Make: PROJECTS) 」(2013)Nicolas Collins 著、 久保田 晃弘 監訳、 船田 巧 訳、オライリー
+- 「Making Things Move ―動くモノを作るためのメカニズムと材料の基本 (Make: PROJECTS) 」（2012）Dustyn Roberts 著、 岩崎 修 監修、 金井 哲夫 訳、オライリー
 
 ## Required Preparation for the Class
 
@@ -72,13 +72,16 @@ The materials for each lecture will be posted on the website so that students ca
 ## Grading
 
 Grades will be graded as follows: 30% for attendance, 30% for small assignments presented several times during the class, and 40% for assignments.
+
 Attendance points will be counted by submitting your comments and questions on the Google Form at the end of each class.
 
 For the short assignment, you will submit the work you have done in class as it is in data format or as a document including photos, videos, etc. in physical format via Google Classroom.
 
 The final assignment will be one of the following, which must be submitted by the end of the 14th class session by installing the exhibit in the AMC Lab.
+
 - A brushed-up version of the small assignment created in class
 - A free work (a work that reflects the knowledge gained in the class on your own work)
+- 
 Both individual and group work is acceptable for the assignment.
 
 The grade for the final assignment will be based on what the student intended to produce rather than on the degree of completion.
@@ -112,9 +115,9 @@ In addition, for the final project, students should bring materials like paper, 
 Basically, you will use the computer provided in the AMC lab, Mac mini (M1, Late 2020).
 The following software is likely to be used at this time.
 
-Arduino IDE v2.0.3 (https://www.arduino.cc/en/software)
-Processing v4.2 (https://processing.org/download)
-Adobe Illustrator 2022-10, v27 (https://helpx.adobe.com/jp/illustrator/system-requirements.html)
+- Arduino IDE v2.0.3 (https://www.arduino.cc/en/software)
+- Processing v4.2 (https://processing.org/download)
+- Adobe Illustrator 2022-10, v27 (https://helpx.adobe.com/jp/illustrator/system-requirements.html)
 Adobe can be used on the AMC lab machines by logging in with your Geidai account.
 
 You may bring your own laptop to work on. However, please be aware that we may not be able to immediately respond to differences in behavior or bugs that may occur due to non-macOS operating systems, different OS versions, or different hardware.

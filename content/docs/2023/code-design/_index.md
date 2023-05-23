@@ -53,15 +53,16 @@ bookCollapseSection: true
 
 ## テキスト・参考文献
 
-「Code as Creative Medium 創造的なプログラミング教育のための実践ガイドブック」(2022) ゴラン・レヴィン 、 テガ・ブレイン著 澤村正樹 、 杉本達應 、 米田研一　訳、BNN
-「Arduinoをはじめよう 第4版」(2015) Massimo Banzi、Michael Shiloh　著、船田 巧　訳、オライリー
-「Handmade Electronic Music ―手作り電子回路から生まれる音と音楽 (Make: PROJECTS) 」(2013)Nicolas Collins 著、 久保田 晃弘 監訳、 船田 巧 訳、オライリー
-「Making Things Move ―動くモノを作るためのメカニズムと材料の基本 (Make: PROJECTS) 」（2012）Dustyn Roberts 著、 岩崎 修 監修、 金井 哲夫 訳、オライリー
+- 「Code as Creative Medium 創造的なプログラミング教育のための実践ガイドブック」(2022) ゴラン・レヴィン 、 テガ・ブレイン著 澤村正樹 、 杉本達應 、 米田研一　訳、BNN
+- 「Arduinoをはじめよう 第4版」(2015) Massimo Banzi、Michael Shiloh　著、船田 巧　訳、オライリー
+- 「Handmade Electronic Music ―手作り電子回路から生まれる音と音楽 (Make: PROJECTS) 」(2013)Nicolas Collins 著、 久保田 晃弘 監訳、 船田 巧 訳、オライリー
+- 「Making Things Move ―動くモノを作るためのメカニズムと材料の基本 (Make: PROJECTS) 」（2012）Dustyn Roberts 著、 岩崎 修 監修、 金井 哲夫 訳、オライリー
 
 ## 準備学習内容・時間の目安
 
 毎回の講義の最後に次回の予習内容を提示する。
 また各回の講義資料をWebサイトに掲載するので、必要に応じて各自で復習を行う。
+
 ## 成績評価基準・課題・フィードバック
 
 成績は出席点を30%、授業中に数回提示される小課題点を30%、課題点を40%として評価する。
@@ -104,9 +105,9 @@ bookCollapseSection: true
 基本的にはAMC演習室に備え付けられているコンピューター、Mac mini (M1, Late 2020)を使用します。
 現時点で使用する可能性の高いソフトウェアは以下の通りです。
 
-Arduino IDE v2.0.3 (https://www.arduino.cc/en/software)
-Processing v4.2(https://processing.org/download)
-Adobe Illustrator 2022-10, v27(https://helpx.adobe.com/jp/illustrator/system-requirements.html)
+- Arduino IDE v2.0.4 (https://www.arduino.cc/en/software)
+- Processing v4.2(https://processing.org/download)
+- Adobe Illustrator 2022-10, v27(https://helpx.adobe.com/jp/illustrator/system-requirements.html)
 
 AMC演習室のマシンではAdobeを藝大アカウントでログインすることで使用できるようになっています。
 
