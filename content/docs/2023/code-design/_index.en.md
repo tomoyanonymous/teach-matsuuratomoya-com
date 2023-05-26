@@ -39,7 +39,7 @@ In addition, by learning how to convert data and materials into each other throu
 4. [(4/28) Binary Numbers WS ](./4)
 5. [(5/12) Handmade Computer(DIWO Full Adder)](./5)
 6. [(5/19) Software and Algorithm - Let's try using Arduino](./6)
-7. (5/26) Considering Inputs (Switches, Handmade Resistors)
+7. [(5/26) Considering Inputs (Make Unreasonable Mouse)](./7)
 8. (6/2) Considering Output (motor, solenoid, relay)
 9. (6/9) Cartesian Robot and Digital Fabrication (Plotter, Laser Cutter)
 10. (6/16) Cartesian Robot and Digital Fabrication (3D Printer and G-code Hack)
