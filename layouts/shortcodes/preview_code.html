@@ -1,0 +1,29 @@
+{{ $ref := "" }}
+{{ $type := "" }}
+
+{{ $target := "" }}
+{{ with .Get "type" }}
+ {{ $type = . }}
+{{ end }}
+{{ with .Get "href" }}
+  {{ $ref = . }}
+  {{ $target = "_blank" }}
+{{ end }}
+{{ with .Get "relref" }}
+  {{ $ref = relref $ . }}
+{{ end }}
+
+<h3>{{ (path.Base $ref) | .Page.RenderString }}</h3>
+
+<a {{ with $ref }} href="{{.}}" {{ end }} {{ with $target }} target="{{.}}" rel="noopener" {{ end }} class="book-btn{{ with .Get "class" }} {{ . }}{{ end }}">
+  DL
+</a>
+
+
+{{$page:=.Page}}
+{{ with .Page.Resources.GetMatch $ref }}
+{{( printf "```%s\n%s\n```\n" $type .Content ) | $page.RenderString}}
+{{else}}
+<p>file {{$ref}} not found </p> 
+{{ end }}
+
