@@ -8,7 +8,9 @@ weight: 9
 
 ## スライド
 
-{{< button href="2023-code-and-design-9.pdf">}}スライド（PDF）{{< /button >}}
+{{< embed_pdf >}}
+
+{{< button href=.Page.Params.pdf_path >}}スライド（PDF）{{< /button >}}
 
 {{< button href="slides">}}スライド（HTML）{{< /button >}}
 
