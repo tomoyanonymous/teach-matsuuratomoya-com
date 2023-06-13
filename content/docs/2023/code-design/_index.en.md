@@ -41,7 +41,7 @@ In addition, by learning how to convert data and materials into each other throu
 6. [(5/19) Software and Algorithm - Let's try using Arduino](./6)
 7. [(5/26) Considering Inputs (Make Unreasonable Mouse)](./7)
 8. [(6/2) Considering Inputs 2 - Combining Processing and Arduino, OOP (PONG for One)](./8)
-9. (6/9) Cartesian Robot and Digital Fabrication (Plotter, Laser Cutter)
+9. [(6/9) Considering Outputs - Generating Sound with Arduino](./9)
 10. (6/16) Cartesian Robot and Digital Fabrication (3D Printer and G-code Hack)
 11. (6/23) Studio Work 1. Consultation
 12. (6/30) Studio Work 2. Work
