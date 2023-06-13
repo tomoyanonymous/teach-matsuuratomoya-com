@@ -1,0 +1,17 @@
+{{ $target := "" }}
+
+{{with .Page.Resources.GetMatch "*.pdf"}}
+    {{ $target = . }}
+{{end}}
+
+{{with .Page.Params.pdf_path}}
+    {{ $target = . }}
+{{end}}
+
+
+{{ with index .Params 0 }}
+ {{ $target = . }}
+{{ end }}
+
+<embed src = {{$target}} type="application/pdf" style = "width:100%;min-height:300px;aspect-ratio: 16/10;" />
+

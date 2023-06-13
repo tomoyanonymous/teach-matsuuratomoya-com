@@ -21,12 +21,6 @@ contentDir = 'content'
   weight = 2
   title = "Classes by Matsuura Tomoya"
 
-[mediaTypes]
-  [mediaTypes.'text/ino']
-    suffixes = ['ino']
-  [mediaTypes.'text/pde']
-    suffixes = ['pde']
-
 
   
 # (Optional) Set Google Analytics if you use it to track your website.
