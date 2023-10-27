@@ -178,7 +178,7 @@ cat '/Applications/Audacity.app/Contents/MacOS/Audacity' | ffplay -f u8 -i pipe:
 
 ![](slides/2023-media-art-programming2-4.011.jpeg)
 
-##　Javascriptでバイト列を操作しよう
+## Javascriptでバイト列を操作しよう
 
 生のバイトデータをffplayにパイプして聴くことはできました。それではいよいよバイトデータを生成するコードを作っていきましょう。
 
