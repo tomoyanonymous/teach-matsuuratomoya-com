@@ -318,28 +318,159 @@ file.end();
 
 ### 連続して実行できるようにしよう
 
-WIP...
+`Uint8Array`の中身を標準出力に書き込むの自体は、`process.stdout.write(data)`と割と簡単にできますが、それを永続的に続けられるようにするのは意外と面倒です。
+
+とりあえず、先ほど配列生成をしたコードを標準出力に書き出せるように変えましょう。
 
 ```js
-const { setTimeout } = require('timers/promises');
+    const data = Uint8Array.from({ length: length },
+        (v, t) =>  bytebeat(t)
+    );
+    process.stdout.write(data);
+```
+
+このファイルを`bytebeat_stream.js`としましょう。
+これでnodeの出力を直接パイプして5秒間は再生できるようになりました。
+
+```sh
+node bytebeat_stream.js | ffplay -f u8 -i pipe:0  -ar 8k -ac 1 
+```
+
+最終的にはこれを連続して行えるようにしたいので、こんな感じに無限ループを作ってみます。
+
+```js
+while(true){
+    const data = Uint8Array.from({ length: length },
+        (v, t) =>  bytebeat(t)
+    );
+    process.stdout.write(data);
+}
+```
+
+このコードには2つの問題があります。1つ目に、tは配列生成時に作られるインデックスなので、5秒ごとに0にリセットされてしまいます。そのため、tは外側にグローバルな変数として定義して、更新するようにしましょう。
+
+```js
+let t = 0;
+while(true){
+    const data = Uint8Array.from({ length: length },
+        (v, _t) =>  {
+            const res = bytebeat(t);
+            t++;
+            return res;
+            }
+    );
+    process.stdout.write(data);
+}
+```
+
+`t`は後から書き換える変数として宣言するために`const`ではなく`let`で宣言してください。
+
+また元々の配列生成に使っていた引数`(v,t)`はもう使わないので、変数`t`と名前が被らないように`_t`と変えておきましょう。
+
+もう1つの問題としては、バイト列を生成する速度が実際にオーディオドライバーで消費されるよりも圧倒的に速いことです。
+（これは元のC言語のプログラムでもそういう仕様なのであまり気にしなくても良いのですが、、、）使われることのないデータが無限に生成されてパイプに流されるとメモリを異常に食ったりするので、5秒分の配列を生成したら5秒分休むようなコードに変えましょう。
+こうしたコードの実現方法はいくつかあるのですが、簡単な方法は特定の関数を一定周期で実行し続ける、`setInterval`関数を使うことです。
+
+まず、5秒分標準出力に書き込む部分を`mainProcess`として関数にしましょう。
+
+```js
+const mainProcess = ()=> {
+    const data = Uint8Array.from({ length: length },
+        (v, _t) => {
+            const res = bytebeat(t);
+            t += 1;
+            return res
+        }
+    );
+    process.stdout.write(data);
+};
+```
+これを、`setInterval`に指定します。第2引数に実行間隔を指定しますが、この時の数値の単位はミリ秒です。なので、`seconds`で指定した秒数を1000で割ってあげましょう。
+
+```js
+setInterval(mainProcess,seconds / 1000.0);
+```
+
+実際には、`mainProcess`の実行にも多少なり時間がかかるはずなので、ピッタリ5秒分を生成して5秒待つ、をやっているとオーディオドライバに書き込むデータが不足して落ちるケースがたまにあるようです。そうした場合`1000.0`の代わりに`1010.0`とかにして実行感覚を多少速くしてあげるのもいいでしょう。
+
+そういうわけで、完成版`bytebeat_stream.js`は次のような感じで完成です。
+
+```js
 const sample_rate = 8000;
-const seconds = 5;
+const seconds = 1;
 const length = sample_rate * seconds;
 const bytebeat = t =>
-    (((t >> 10 ^ t >> 11) % 5)* t>>16)* ((t >> 14 & 3 ^ t >> 15 & 1) + 1) * t % 99 + ((3 + (t >> 14 & 3) - (t >> 16 & 1)) / 3 * t % 99 & 64);
+    (((t >> 10 ^ t >> 11) % 5) * t >> 16) * ((t >> 14 & 3 ^ t >> 15 & 1) + 1) * t % 99 + ((3 + (t >> 14 & 3) - (t >> 16 & 1)) / 3 * t % 99 & 64);
 let t = 0;
-(async () => {
-    while (true) {
-        const data = Uint8Array.from({ length: length },
-            (v, _t) => {
-                const res = bytebeat(t);
-                t += 1;
-                return res
-            }
-        );
-        process.stdout.write(data);
-        await setTimeout(seconds / 1000.0);
-    }
-})()
 
+const mainProcess = () =>{
+    const data = Uint8Array.from({ length: length },
+        (v, _t) => {
+            const res = bytebeat(t);
+            t += 1;
+            return res
+        }
+    );
+    process.stdout.write(data);
+};
+
+setInterval(mainProcess,seconds / 1000.0);
 ```
+
+
+
+## 補足（備忘録）
+
+### Javascriptでの整数演算の処理について
+
+JSで最終的に整数の値をUint8Arrayに詰め込むときの数値型の変換がC言語でのBytebeatと同じになるかどうかは実はそんなに自明ではありません。
+
+例えばNode.jsのREPLを開いていくつか計算してみると、
+```
+> 1<<30
+1073741824
+> 1<<31
+-2147483648
+> 1<<32
+1
+
+> (1<<31)+0.1
+-2147483647.9
+> 1.1<<31
+-2147483648
+> 0.9<<31
+0
+
+> 2 ** 52
+4503599627370496
+> 2**52+1
+4503599627370497
+> 2 ** 53 
+9007199254740992
+> 2 ** 53 +1
+9007199254740992
+```
+
+といった感じになっています。ここから、仕様を調べずともおおよそ次のことができます。
+
+- JSの数値の内部表現は64bit浮動小数点（C言語における`double`）である。
+- うち、仮数部分（指数部が0の場合の整数値）signed 53bitである（上位32bitを抜き出すとCの`int`/`int32_t`になる）。
+- &、ビット演算を行う際は、一旦整数に切り捨てをしてから、signed 32bit同士の演算として計算する。
+- `Uint8Array`などに入れるときは下位ビットを切り出してキャストしている。52bitの整数から32bitにキャストされるときにも下位32ビットが使われている。
+
+後々調べたら大体この仕様であっているようです。
+
+この挙動が結局、C言語でBytebeatをやる際には`t`は`main`関数の第1引数、つまり`int`を使い、`putchar`をするときに`char`型にキャストされるケースと同じ結果を導くようです。
+
+C言語とJavascriptで簡単に同じ音が鳴るのは結構絶妙な仕様のバランスの上に成立しているように見えます。そこまで見越して作っていたのかどうかはよくわかりませんが・・・。
+
+ただ、よく考えるとt++で時刻を更新して行ったときに、JavaScriptでは2^52まで足されたあと、0に戻るのではなく精度が落ちたままインクリメントが続くことになりそうです。例えばサンプルレート44.1kHzのモノラルの場合どのくらいから精度が落ちるのでしょうか。
+
+```sh
+> (2**52 /44100)/(60*60*24*365)
+3238.2813460788693
+```
+　
+3238年間は心配なさそうです。
+
+
