@@ -1,10 +1,10 @@
 ---
 title: Week 3
-date: 2023-10-27T16:38:58+09:00
+date: 2023-10-20
 weight: 3
 params:
   pdf_path: 2023-media-art-programming2-3.pdf
-draft: true
+draft: false
 ---
 
 # 2023 メディアアート・プログラミング Week 3

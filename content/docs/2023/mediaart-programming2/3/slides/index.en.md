@@ -1,6 +1,6 @@
 ---
-title: "Class Name 2023 Week 3 Slides"
-date: 2023-10-27T16:38:58+09:00
+title: Media Art Programming 2023 Week 3 Slides
+date: 2023-10-20
 bookHidden: true
 ---
 

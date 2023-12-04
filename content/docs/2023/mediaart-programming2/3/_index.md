@@ -1,9 +1,9 @@
 ---
 title: 第3週
-date: 2023-10-27T16:38:58+09:00
+date: 2023-10-20
 weight: 3
-draft: true
-params: 
+draft: false
+params:
   pdf_path: 2023-media-art-programming2-3.pdf
 ---
 
