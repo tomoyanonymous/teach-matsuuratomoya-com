@@ -6,100 +6,101 @@ params:
     pdf_path: "2023-media-art-programming2-4.pdf"
 ---
 
-# 2023年　メディアアート・プログラミング 第4回
+# 2023　Media Art Programming 2 Week 4
 
 ## スライド
 
 {{< embed_pdf >}}
 
-{{< button href=.Page.Params.pdf_path >}}スライド（PDF）{{< /button >}}
+{{< button href=.Page.Params.pdf_path >}}Slide（PDF）{{< /button >}}
 
-{{< button href="slides">}}スライド（HTML）{{< /button >}}
+{{< button href="slides">}}Slide（HTML）{{< /button >}}
 
-## シェルとパイプ
+## Shell and pipe
 
-前回まで`ls`や`cd`のような基礎コマンドを使ってきましたが、これらはターミナルのテキスト入力を受け取るとターミナルにテキスト出力を返すものでした。
+Previously we have used basic commands like `ls` and `cd`, which take terminal text input and return text output to the terminal.
 
-Unix系のOSでは、単純な機能を持つコマンドの入出力を**パイプ**と呼ばれる機能を使い、組み合わせて複雑な処理を実行できます。
+On Unix-like operating systems, the input and output of commands with simple functions can be combined to perform complex operations using a feature called **pipes**.
 
-例えばmacOSで使えるテキストを音声で読み上げるコマンド`say`を例にしましょう。
+Take, for example, the command `say`, which can be used on macOS to read text aloud.
 
-次のコマンドを実行すると、macOSが音声で”こんにちは”と喋ってくれます。
+The following command will cause macOS to say "Hello" aloud.
+
 
 ```sh
-say "こんにちは"
+say "Hello".
 ```
 
-ここでは、sayというプログラムが**標準入力（stdin）**から`"こんにちは"`というテキストを受け取っています。
+Here, a program called say receives the text ``"hello"`` from standard input (stdin).
 
-では、入力が全くないとどうなるでしょうか？
+So what happens if there is no input at all?
 
 ```sh
 say
-```
+````
 
-このように入力なしで実行すると、sayコマンドはテキスト入力を待機するモードになります。ここで、"こんにちは"と入力してからEnterキーを押すと読み上げが発生します。読み上げ終わると再度テキスト入力を待機します。
+When executed without input, the say command enters a mode in which it waits for text input. Here, typing "hello" and then pressing the Enter key will cause the command to read out the text. When it finishes reading, it waits for text input again.
 
-標準入力は多くの場合、第1引数の形で与えられるか、そうでなければプログラム実行時にユーザーがターミナルから入力するような形をとります。
+Standard input is often given in the form of a first argument or otherwise entered by the user from the terminal when the program is executed.
 
-ここでパイプを使うと、別のコマンドの結果を標準入力としてsayに渡すことができます。
+A pipe can be used here to pass the result of another command to say as standard input.
 
 ```sh
-echo "こんにちは" | say
+echo "hello" | say
 ```
 
-`echo`は単に任意のテキストを標準出力に書き込むコマンドです。sayは先ほど同様に引数なしで実行しましたが、対話モードにはならず`echo`から与えられた"こんにちは"を読んで終了します。
+The ``echo`` command simply writes arbitrary text to standard output. say is executed without arguments as before, but instead of going into interactive mode, it reads the "hello" given by ``echo`` and exits.
 
-`echo`の代わりに`cat hogehoge.txt`のようなファイルを標準出力に書き出すコマンドを使えば、任意のテキストファイルを読み上げさせることもできます。
+Instead of `echo`, you can use a command that writes a file to standard output, such as `cat hogehoge.txt`, to read an arbitrary text file.
 
-## ファイルとデバイス
+## Files and Devices
 
-ところで、`cat`が開けるものはストレージ上のファイルだけではありません。Unix系のOSはファイルを扱うのと同じようにコンピューター上のハードウェア情報（例えばCPUの温度や、ハードディスクの回転数など）を取ることもできます。
+By the way, files on storage are not the only things that `cat` can open; Unix-like operating systems can also take hardware information on the computer (e.g., CPU temperature, hard disk RPM, etc.) just as they can handle files.
 
-こうしたデバイスは`/dev`ディレクトリに存在します。このディレクトリはFinderなどから覗くことはできません。
+These devices reside in the `/dev` directory. This directory is not accessible from the Finder.
 
 ```sh
 ls /dev
 ```
 
-たくさんのデバイスがありますが、名前から内容を推測することは難しいです。Bluetoothで繋がってるデバイスなどはその片鱗が伺えます。ここでは試しに、コンピューター上に搭載されているハードウェア乱数生成機`urandom`を使ってみましょう。
+There are so many devices out there that it is difficult to guess their contents from their names, but devices connected via Bluetooth are a glimpse of what is possible. Let's try to use `urandom`, a hardware random number generator on a computer.
 
-コンピューター上では乱数をアルゴリズミックな数列として扱うことが多いですが、これは乱数の初期値を知っていると続く乱数列を予測できてしまうことでもあるため、セキュリティ的に重要な乱数の生成は時刻やハードウェア乱数生成機を元に使うことが多いのです。
+On computers, random numbers are often treated as algorithmic sequences of numbers, which means that knowing the initial value of a random number can predict subsequent random number sequences, so security-critical random number generation is often based on time or hardware random number generators.
 
-`cat`で開くとものすごい数の乱数が出てターミナルが固まってしまうので、最初の数行だけを取り出すheadコマンドを使ってみましょう。`urandom`はバイナリとしての乱数を書き出すため、文字列としてエンコードできないものもたくさん含まれてきます。
+Since opening with `cat` produces a tremendous number of random numbers and causes the terminal to freeze, let's use the head command to extract only the first few lines. Since `urandom` writes out random numbers as binary, it will include many that cannot be encoded as strings.
 
 ```sh
 head /dev/urandom
 ```
 
-そして、現在は使えないものの、昔のLinuxには`/dev/dsp`という、パイプで書き込むと直接オーディオドライバに波形データを書き込める仮想デバイスが存在しました。現在Linuxでは`aplay`というコマンドで同様のことができます。
+And although it is not available now, in the past Linux had a virtual device called `/dev/dsp` that could write waveform data directly to the audio driver when written via pipe. Currently in Linux, the command `aplay` can do the same thing.
 
-この仕組みを活用して、できるだけ短く単純なプログラムで音を生成する**Bytebeat**という試みがあります。
+There is an attempt to take advantage of this mechanism, called **Bytebeat**, to generate sound in as short and simple a program as possible.
 
 ## Bytebeat
 
 {{< youtube tCRPUv8V22o>}}
 
-Bytebeatは2011年にviznutがYoutube上の動画で公開し、自身のブログの解説などで広がっていったものです。
+Bytebeat was first published by viznut in 2011 in a video on Youtube and spread through commentary on his blog.
 
-[Algorithmic symphonies from one line of code -- how and why?(2011)](http://countercomplex.blogspot.com/2011/10/algorithmic-symphonies-from-one-line-of.html)
+[Algorithmic symphonies from one line of code -- how and why?(2011)](http://countercomplex.blogspot.com/2011/10/algorithmic-symphonies-from- one-line-of.html)
 
-その後、Webブラウザ上でも同様のコードを実行できる環境がいくつか誕生しました。
+Later, several environments were created that allow similar code to be executed on a web browser.
 
 https://greggman.com/downloads/examples/html5bytebeat/html5bytebeat.html
 
 https://sarpnt.github.io/bytebeat-composer
 
 
-今回はBytebeatを、実際にバイナリデータを作る昔ながらの（？）やり方でやってみましょう。
+Let's try Bytebeat the old-fashioned (?) way of actually creating binary data. Let's try it the old-fashioned (?) way of actually creating binary data.
 
-Bytebeatは元々次のようなC言語のプログラムで作られていました。
+Bytebeat was originally created with the following C program.
 
 ```c
 main(t){for(;;t++)putchar(((t<<1)^((t<<1)+(t>>7)&t>>12))|t>>(4-(1^7&(t>>19)))|t>>7);}
 ```
 
-このC言語のコードは極限まで圧縮されているのでもうちょっと丁寧に書くとこうなります。
+This C code is compressed to the utmost limit, so if you write it a little more carefully, it will look like this.
 
 ```c
 int main(int t){
@@ -109,26 +110,26 @@ int main(int t){
 }
 ```
 
-C言語のプログラムは`main`という関数を定義するとそれがプログラムで実行される入り口になります。
-`for`による無限ループの中で、`t`がプログラム開始時には0でスタートし、ループごとに1増えています。これが仮想的な時間になるわけですね。
+When a C program defines a function called `main`, it is the entry point for the program to execute.
+In an infinite loop with `for`, `t` starts at 0 at the beginning of the program and is increased by 1 at each loop. So this is the virtual time.
 
-`putchar`は標準出力に1バイトのデータを書き込む、C言語の中でも最も原始的な関数の1つです。
-このtを様々な演算で計算すると、1バイト分のデータ（0~255）がある1サンプルの波形の値（≒電圧、空気圧）になって出力されます。
+`putchar` is one of the most primitive functions in C, writing a single byte of data to the standard output.
+When this t is calculated with various operations, one byte of data (0~255) is output as the value of one sample waveform (≈voltage, air pressure).
 
-`/dev/dsp`に書き込んだデータは1バイト1サンプル、サンプリングレート8000Hzとして解釈されます。
+Data written to `/dev/dsp` is interpreted as 1 byte 1 sample with a sampling rate of 8000 Hz.
 
-今回は、環境構築が大変なC言語の代わりにNode.jsを使い、Linux以外でも実行できるように`ffmpeg`というプログラムを使用します。
+This time, we will use Node.js instead of C, which is difficult to build an environment for, and a program called `ffmpeg` so that it can be run outside of Linux.
 
-## ffmpegとは
+## What is ffmpeg?
 
-`ffmpeg`は様々なフォーマットのファイルやデータストリームを変換するためのツールです。
-例えばwavファイルをmp3ファイルに変換したり、インターネットラジオを受信してファイルに書き出したり、逆に音声ファイルを再生してインターネットラジオをホストするようなこともできます。
+`ffmpeg` is a tool for converting files and data streams of various formats.
+For example, you can convert a wav file to an mp3 file, receive internet radio and export it to a file, or conversely, play an audio file and host internet radio.
 
-非常に多種多様なフォーマットの変換が可能でモジュラーな作りになっているため、世の配信サービスの裏側では大抵ffmpegが動いていると思っても過言ではありません。
+Because of its modularity and ability to convert so many different formats, it is no exaggeration to say that ffmpeg is behind most of the distribution services in the world.
 
-### ffmpegのインストール
+### Installing ffmpeg
 
-`ffmpeg`はHomebrewでインストールできます。依存ライブラリが多いため時間がかかるので注意してください。
+You can install `ffmpeg` with Homebrew. Please note that it takes a long time because of many dependent libraries.
 
 ```sh
 brew install ffmpeg
@@ -146,49 +147,49 @@ brew install ffmpeg
 ffplay hoge.wav
 ```
 
-また、インターネットラジオも聞けます。以下のURLを開くとNHK-FM（東京）を受信できます。[^nhkurl]
+You can also listen to Internet radio. Open the following URL to receive NHK-FM (Tokyo). [^nhkurl]
 
-[^nhkurl]: NHKのWebラジオのURL一覧はここから取得できます。　http://www.nhk.or.jp/radio/config/config_web.xml
+[^nhkurl]: You can get a list of NHK web radio URLs here.http://www.nhk.or.jp/radio/config/config_web.xml
 
 ```sh
 ffplay https://radio-stream.nhk.jp/hls/live/2023507/nhkradiruakfm/master.m3u8
 ```
 
-再生中は標準ではスペクトログラムという周波数分布のビューが表示されます。
+During playback, the standard view of the frequency distribution is the spectrogram.
 
-![ffplayでスペクトログラムを表示しながら再生している様子のスクリーンショット。](radio1.png)
+![Screenshot of playback while displaying the spectrogram in ffplay](radio1.png)
 
-このウィンドウにフォーカスをした状態でwキーを押すと、波形表示のモードと切り替えができます。[^view]
+Pressing the w key with focus on this window allows you to switch between modes of waveform display. [^view]
 
-[^view]: オプションで`-showmode 0`のようにすると0:ビデオ（音声ファイルの場合非表示）、1:波形、2:スペクトログラム が表示されます。
+[^view]: If you set the option `-showmode 0`, 0: video (hidden for audio files), 1: waveform, 2: spectrogram will be displayed.
 
 
 ![ffplayで音声波形を表示しながら再生している様子のスクリーンショット。](radio2.png)
 
-### Audacityをffmpegで聴く
+### Listen to Audacity with ffmpeg
 
-前回、「AudacityでAudacityを聴く」というのをやりました。あれをもう一度ffplayでもやると次のようなコマンドになります。
+Last time, we did "Listen to Audacity with Audacity". If you do that again with ffplay, you will get the following command.
 
 ```sh
 cat '/Applications/Audacity.app/Contents/MacOS/Audacity' | ffplay -f u8 -i pipe:0 -ar 44k -ac 1
 ```
 
-今回は、データを1バイト1サンプル、サンプルレートは44100（44kと省略できます）、オーディオチャンネル数はモノラルとして解釈しましょう。
-通常、ffplayは拡張子やファイルのヘッダーからデータのフォーマットを推定しますが、今回は生のデータを直接読むので、オプションとしてフォーマットを指定してあげる必要があります。このオプションは、前回Audacityでやった時の"Rawデータをインポート"のオプションと直接的に対応しています。
+This time, let's interpret the data as 1 byte per sample, a sample rate of 44100 (can be abbreviated as 44k), and the number of audio channels as mono.
+Normally, ffplay will infer the format of the data from the file extension or file header, but this time, since we are reading the raw data directly, we need to specify the format as an option. This option corresponds directly to the "Import Raw Data" option we used in Audacity.
 
 ![](slides/2023-media-art-programming2-4.011.jpeg)
 
-##　Javascriptでバイト列を操作しよう
+## Manipulate bytes with Javascript!
 
-生のバイトデータをffplayにパイプして聴くことはできました。それではいよいよバイトデータを生成するコードを作っていきましょう。
+We've piped the raw byte data to ffplay and listened to it. Now it's time to create the code to generate the byte data.
 
-Javascriptは本来、数値のバイトサイズなどの区別がありません（全て実数、多くの環境では64bit浮動小数点のフォーマットで扱われます）。
+Javascript inherently makes no distinction between numeric byte sizes, etc. (everything is handled in real numbers, 64-bit floating point format in many environments).
 
-唯一、数値データの型を決めて扱う方法として、型を指定した配列、今回の場合は`Uint8Array`を使うことで実現できます。
+The only way to handle numerical data with a defined type is by using an array with a specified type, in this case `Uint8Array`.
 
-この方法だと連続して標準出力に書き込み続けるのが少し難しいため、まず一度ファイルにバイナリデータを書き出して、それを先ほどと同じくcatで読み出してパイプしてみましょう。
+With this method, it is a little difficult to continuously write to standard output, so let's first write the binary data to a file once, and then read it out with cat and pipe it as before.
 
-今回Bytebeatを作る最小のプログラムは次のようなものになります。
+The minimum program to create Bytebeat this time is as follows.
 
 ```js {title = "bytebeat.js"}
 const fs = require("fs");
@@ -204,21 +205,23 @@ const data = Uint8Array.from({ length: byte_length },
 fs.writeFile("jsbytebeat.hex",data, err => {} );
 ```
 
-順番にみていきましょう。
+Take a look around.
 
 ```js
 const fs = require("fs");
 ```
 
-この行は、最終的にファイル書き込みをするためのライブラリの読み込みです。あまり気にしなくても大丈夫です。
+This line is loading the library for the final file write. Don't worry about it too much.
 
 ```js
 const sample_rate = 8000;
 const seconds = 5;
 const byte_length = sample_rate*seconds;
 ```
-はじめ2行は、サンプリングレート（1秒間あたり何サンプルの解像度でデータを詰め込むか）の指定、生成する音声波形の長さを何秒にするかを決めています。
-この2つの値が決まれば、データを最終的に何バイト生成すればいいかがわかります。それが`length`です。
+
+The first two lines specify the sampling rate (how many samples per second of resolution to pack into the data) and the length of the audio waveform to be generated (in seconds).
+Once these two values are determined, you know how many bytes of data should be generated in the end. That is the `length`.
+
 
 ```js
 const bytebeat = t => 
@@ -232,7 +235,8 @@ function bytebeat(t) {
     return (t*(1+(5&t>>10))*(3+(t>>17&1?(2^2&t>>14)/3:3&(t>>13)+1))>>(3&t>>9))&(t&4096?(t*(t^t%9)|t>>3)>>1:255);
 }
 ```
-この定義でも全く同じです。書き方は好みですが、returnを省略できるのは上の書き方の方だけなので注意してください（上の書き方でも、`=>`の後を中括弧`{}`で囲む場合は、やはりreturnが必須です）。
+
+This definition is exactly the same. Note that the above is the only way to omit return, although it is your preference. (Even in the above, return is still required if the `=>` is followed by curly braces `{}`.)
 
 
 ```js
@@ -240,20 +244,21 @@ const data = Uint8Array.from({ length: byte_length },
     (v, t) => bytebeat(t)
 );
 ```
-ここでunsigned 8bit 整数の配列を作成します。やり方にはいろいろありますが、今回は`from`メソッドで`length`と初期化関数を指定する方法を使いましょう。
 
-`{length:byte_length}`では先ほど計算した8000*5=40000サンプル分の配列を生成することを指定しています。
+We will now create an array of unsigned 8-bit integers. There are many ways to do this, but in this case we will use the `from` method to specify the `length` and initialization function.
 
- `(v, t) => bytebeat(t)`は、tという配列のインデックスを取得してbytebeat関数に入れて変換したものを配列に順番に収めていく、という初期化の処理です。
+In `{length:byte_length}`, we specify that we want to create an array of 8000*5=400000 samples, which we calculated earlier.
+
+ `(v, t) => bytebeat(t)` is an initialization process that takes the index of an array called t, puts it into the bytebeat function, and stores the converted values in the array in order.
 
 ```js
 fs.writeFile("jsbytebeat.hex",data, err => {} );
 ```
 
-ここでようやく、出来上がったバイト列を保存します。`"jsbytebeat.hex"`は好きなファイル名で問題ありませんが、特にフォーマットの決まっていないバイナリファイルなら拡張子は`.bin`や`.hex`などを使うことが多いです。3つ目の引数である`err => {}`はエラー処理で何もしないことを指しています。
+At this point, finally, save the resulting byte sequence. The third argument, `err => {}`, indicates that no action is to be taken in error handling. The third argument, `err => {}`, refers to doing nothing in error handling.
 
-では、これを`bytebeat.js`として、ターミナルで実行しましょう。
-この時、ffplayでの`-ar`オプションはソースコード内で指定したサンプリングレートと一致させることを忘れないようにしましょう。
+Now, let's run this as `bytebeat.js` in the terminal.
+At this time, remember that the `-ar` option in ffplay should match the sampling rate specified in the source code.
 
 
 ```sh
@@ -261,37 +266,37 @@ node bytebeat.js
 cat jsbytebeat.hex | ffplay -f u8 -i pipe:0  -ar 8k -ac 1
 ```
 
-うまくいけば、5秒分の音声が再生されて停止するはずです。
+Hopefully, 5 seconds of audio should play and stop.
 
-ffplayの代わりにffmpegでwavファイルとして改めて出力することもできます。
+You can also output it again as a wav file with ffmpeg instead of ffplay.。
 
 ```sh
 cat jsbytebeat.hex | ffmpeg -f u8 -ar 8k -i pipe:0 -c:a pcm_u8 -ac 1  -y jsbytebeat.wav
 ```
 
 
-### 波形を簡易的に観察してみよう
+### Let's take a simple observation of the waveform
 
-試しにbytebeat関数をtをそのまま返すだけの関数としてみます。
+Let's try the bytebeat function as a function that just returns t as it is.
 
 ```js
 const bytebeat = t => 
     t
 ```
 
-この時、tの数値自体は数十万などまで際限なく上昇し続けますが、最終的に`Uint8Array`に書き込まれるときには整数部分下位8bitのみが書き込まれます。どういうことかというと、0~255まで上昇するとまた0に戻るのです。
+At this time, the value of t itself keeps rising without limit up to several hundred thousand, but when it is finally written to `Uint8Array`, only the lower 8 bits of the integer portion are written. What this means is that after rising from 0 to 255, it returns to 0 again.
 
-この、0~255を書き込んだ`jsbytebeat.hex`をVSCodeのHex Editorで開くと次のような見た目をしています。
+If you open this `jsbytebeat.hex` with 0~255 written in it with VSCode's Hex Editor, it looks like the following.
 
 ![バイナリエディタで0~255までが連続するバイナリデータを表示したVisual Studio Codeのスクリーンショット。](binary.png)
 
-00からFF(255)まで順番に数値が上昇して、また00に戻っているのがわかります。
+You can see that the numbers rise in sequence from 00 to FF (255) and back to 00 again.
 
-しかし、バイナリを直接Hex Editorで見るだけではあまりにどんな波形が生成されてるのかわかりにくいです。
+However, it is difficult to understand what kind of waveform is being generated just by looking at the binary directly in the Hex Editor.
 
-ffmpegで書き出してAudacityで見たり、ffplayの波形表示モードを使うこともできるのですが、せっかくなので、簡単な方法でデータをプロットしてみることにしましょう。
+You can export the data to ffmpeg and view it in Audacity, or use ffplay's waveform display mode, but since we are here, let's plot the data in a simple way.
 
-先ほどのbytebeat.jsの後半に以下の行を追加します。
+Add the following line to the second half of bytebeat.js as shown above.
 
 ```js
 let file = fs.createWriteStream("graph.txt");
@@ -306,17 +311,17 @@ for (byte of data){
 file.end();
 ```
 
-上のコードは、`data`の配列を1バイト分読み取り、データの数値の分だけ文字（|）を書いて、改行し、また次の1バイトを読む……というのを繰り返し、graph.txtというファイルを作っています。
+The code above reads one byte of the `data` array, writes a character (|) for the numerical value of the data, breaks the line, reads the next byte again ......, and repeats to create a file called graph.txt.
 
-これで`node bytebeat.js`を改めて実行すると、ディレクトリに`graph.txt`が作られます。
+Now when you run `node bytebeat.js` again, it will create `graph.txt` in the directory.
 
-これをVSCodeで開くとこんな感じになるはず。
+If you open this in VSCode, it should look like this.
 
 ![](graph.png)
 
-文字数の大きさや、テキストの折り返し設定によってい表示は異なりますが、1行ごとに1文字ずつ増えることでノコギリ状の波形がプロットできています。
+Although the display varies depending on the character size and text wrapping settings, the sawtooth waveform is plotted by increasing the number of characters by one per line.
 
-### 連続して実行できるようにしよう
+### Let's make it run continuously.
 
 WIP...
 

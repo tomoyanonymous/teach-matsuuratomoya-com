@@ -1,13 +1,13 @@
 ---
 title: 第3週
 date: 2023-10-27T16:38:58+09:00
-weight: 1
-params: 
-    pdf_path: "hoge.pdf"
+weight: 3
 draft: true
+params: 
+  pdf_path: 2023-media-art-programming2-3.pdf
 ---
 
-# 2023年　授業名 第N回
+# 2023年 メディアアート・プログラミング 第3回
 
 ## スライド
 
