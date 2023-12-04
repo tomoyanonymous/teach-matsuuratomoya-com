@@ -36,14 +36,7 @@ console.log(txt);
 文字列オブジェクトはJavascriptの中では配列のように`str[idx]`として先頭から`idx`番目の文字を取り出せます。
 
 ```js
-//ファイル読み込みライブラリを使用
-const fs = require("fs");
-//ファイル名の指定（./はこのjsファイルと同階層にあることを明示）
-const src = "./henshin.txt";
-//ファイルを読み込み
-const bytes = fs.readFileSync(src);
-//バイト列から文字列に
-const txt = bytes.toString();
+///...以上load_text.jsと同じ
 //配列として先頭から100文字コンソールに表示
 for (let i =0;i<100;i++) {
     console.log(txt[i])
@@ -59,14 +52,7 @@ for (let i =0;i<100;i++) {
 こちらのやり方だと、配列を変換する`map`や`filter`、`reduce`などの便利な関数が使えます。
 
 ```js
-//ファイル読み込みライブラリを使用
-const fs = require("fs");
-//ファイル名の指定（./はこのjsファイルと同階層にあることを明示）
-const src = "./henshin.txt";
-//ファイルを読み込み
-const bytes = fs.readFileSync(src);
-//バイト列から文字列に
-const txt = bytes.toString();
+///...以上load_text.jsと同じ
 //文字の配列にする
 const arr = Array.from(txt);
 console.log(arr);
@@ -77,14 +63,7 @@ console.log(arr);
 ### text_sort.js （文字列を文字コード順でソート）
 
 ```js
-//ファイル読み込みライブラリを使用
-const fs = require("fs");
-//ファイル名の指定（./はこのjsファイルと同階層にあることを明示）
-const src = "./henshin.txt";
-//ファイルを読み込み
-const bytes = fs.readFileSync(src);
-//バイト列から文字列に
-const txt = bytes.toString();
+///...以上load_text.jsと同じ
 //文字の配列にする
 const arr = Array.from(txt);
 //配列を文字コード順でソート
@@ -99,14 +78,7 @@ fs.writeFileSync("henshin_sorted.txt",sorted_str);
 ### text_reversed.js （文字列を前後逆転）
 
 ```js
-//ファイル読み込みライブラリを使用
-const fs = require("fs");
-//ファイル名の指定（./はこのjsファイルと同階層にあることを明示）
-const src = "./henshin.txt";
-//ファイルを読み込み
-const bytes = fs.readFileSync(src);
-//バイト列から文字列に
-const txt = bytes.toString();
+///...以上load_text.jsと同じ
 //文字の配列にする
 const arr = Array.from(txt);
 //配列を反転
@@ -122,14 +94,8 @@ fs.writeFileSync("henshin_reversed.txt",reversed_str);
 ### text_unicode_shift.js （文字列のUnicodeコードポイントを一つずつずらす）
 
 ```js
-//ファイル読み込みライブラリを使用
-const fs = require("fs");
-//ファイル名の指定（./はこのjsファイルと同階層にあることを明示）
-const src = "./henshin.txt";
-//ファイルを読み込み
-const bytes = fs.readFileSync(src);
-//バイト列から文字列に
-const txt = bytes.toString();
+///...以上load_text.jsと同じ
+
 //文字の配列にする
 const arr = Array.from(txt);
 //配列の文字コードを1つ隣へずらす
@@ -146,14 +112,8 @@ fs.writeFileSync("henshin_shifted.txt",shifted_str);
 
 
 ```js
-//ファイル読み込みライブラリを使用
-const fs = require("fs");
-//ファイル名の指定（./はこのjsファイルと同階層にあることを明示）
-const src = "./henshin.txt";
-//ファイルを読み込み
-const bytes = fs.readFileSync(src);
-//バイト列から文字列に
-const txt = bytes.toString();
+///...以上load_text.jsと同じ
+
 //文字の配列にする
 const arr = Array.from(txt);
 
