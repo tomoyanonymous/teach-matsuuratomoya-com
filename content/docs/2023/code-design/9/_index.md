@@ -2,6 +2,8 @@
 title: 第9週
 date: 2023-06-09
 weight: 9
+params:
+    pdf_path: 2023-code-and-design-9.pdf
 ---
 
 # 2023年　東京藝術大学 芸術情報センター開設科目　「コードとデザイン」 第9回

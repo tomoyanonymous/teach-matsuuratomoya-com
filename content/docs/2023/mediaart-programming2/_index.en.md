@@ -1,6 +1,6 @@
 ---
 title: 2023 Tokyo University of the Arts Art media Center 「Media Art Programming II」（Fall-Winter　Friday 4）
-weight: 1
+weight: 2
 bookCollapseSection: true
 ---
 
