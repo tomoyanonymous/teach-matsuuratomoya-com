@@ -12,3 +12,19 @@ params:
 ## スライド
 
 {{< embed_pdf >}}
+
+## puppeteerのコードサンプル
+
+`autoscroll.js`は`4_auto_scroll.js`でライブラリとして使用するだけなので、内容を理解しなくても大丈夫です。
+
+{{< preview_code href="1_launch.js" type= "js">}}
+
+{{< preview_code href="2_async_intro.js" type= "js">}}
+
+{{< preview_code href="3_map_async.js" type= "js">}}
+
+{{< preview_code href="4_auto_scroll.js" type= "js">}}
+
+{{< preview_code href="5_youtube_hopper.js" type= "js">}}
+
+{{< preview_code href="autoscroll.js" type= "js">}}
