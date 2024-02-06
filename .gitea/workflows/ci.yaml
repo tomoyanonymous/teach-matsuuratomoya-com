@@ -22,7 +22,7 @@ jobs:
       - name: Setup Hugo
         uses: https://github.com/peaceiris/actions-hugo@v2
         with:
-          hugo-version: ${{ matrix.hugo-version }}
+          hugo-version: "latest"
           extended: true
       - name: Run Hugo
         run: hugo --minify
