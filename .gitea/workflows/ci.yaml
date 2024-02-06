@@ -1,0 +1,41 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    env:
+      RUNNER_TOOL_CACHE: /toolcache
+    runs-on: ubuntu-latest
+    steps:
+      - run: git config --global core.quotepath false
+      - name: Install apt packages
+        run: apt update && apt install -y rsync
+      - uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)  
+          fetch-depth: 0
+      - uses: https://github.com/actions/setup-go@v4
+        with:
+          go-version: '^1.20'
+      - name: Setup Hugo
+        uses: https://github.com/peaceiris/actions-hugo@v2
+        with:
+          hugo-version: ${{ matrix.hugo-version }}
+          extended: true
+      - name: Run Hugo
+        run: hugo --minify
+      - name: upload artifacs
+        uses: https://github.com/actions/upload-artifact@v3
+        with: 
+          name: "test2"
+          path: "public/**"
+
+      # - name: Create private key
+      #   run: |
+      #     echo "${{ secrets.PRIVATE_KEY }}" > /tmp/act_runner_key
+      #     chmod 600 /tmp/act_runner_key
+      # - name: rsync public directory
+      #   run: |
+      #     rsync -avz --delete -e "ssh -i /tmp/act_runner_key -o StrictHostKeyChecking=no -p ${{ vars.WEBSERVER_PORT }}" ${{ gitea.workspace }}/public/* ${{ vars.WEBSERVER_USER }}@${{ vars.WEBSERVER_HOST }}:/var/www/html
