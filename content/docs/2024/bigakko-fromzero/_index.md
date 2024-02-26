@@ -94,6 +94,10 @@ DAW、ストリーミングサービス、イマーシブオーディオ、人�
 
 ↑若干歴史を単純化しすぎてないかな？と思う部分はあれど、パーソナルコンピューターの誕生とLSDやホールアースカタログなどネオヒッピー思想の繋がりを漫画も含めわかりやすく解説してくれてます。
 
+[ブルーノ・ラトゥールの取説(2022) 久保明教, 月曜社, 978-4-86503-079-2](https://getsuyosha.jp/product/978-4-86503-079-2/)
+
+↑何度か「歴史の中で非人間、非生物が主語になるのはOKなのか」というのは実はラトゥールのアクターネットワーク論のことを念頭においてます。ただしANTは言葉が一人歩きしがちなのであえて言葉を使いませんでした。
+
 [Rodgers, Tara. 2010. Pink Noises: Women on Electronic Music and Sound. Duke University Press.](https://doi.org/10.2307/j.ctv1134dqn)
 
 [Magnusson, Thor. 2019. Sonic Writing - Technologies of Material, Symbolic, and Signal Inscriptions. Blomsbury Academic. 9781501313868](https://www.bloomsbury.com/sonic-writing-9781501313868/)
