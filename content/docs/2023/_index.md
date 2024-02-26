@@ -1,6 +1,6 @@
 ---
 title: 2023年度
-weight: 1
+weight: -5
 bookFlatSection: true
 ---
 
@@ -16,6 +16,9 @@ bookFlatSection: true
 後期　金曜4限
 
 講師:松浦知也
+
+# 2023年　東京藝術大学 芸術情報センター開設科目　「メディア特論」（通年 水曜6限隔週）(ゲスト講義のため資料なし)
+
 
 
 # [2023年 福岡女学院大学 「サウンド・デザイン」(夏季集中講義)](fukujo-sounddesign)
