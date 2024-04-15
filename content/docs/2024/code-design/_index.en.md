@@ -33,21 +33,23 @@ In addition, by learning how to convert data and materials into each other throu
 
 (This is the first year of the class thus the content may change according to the progress.)
 
-1. [(4/7) Introduction: Computing without Electricity](./1)
-2. [(4/14) Anti-Introduction to Electronics (Victorian Oscillator)](./2)
-3. [(4/21) Paper Circuit and Logic Circuits](./3)
-4. [(4/28) Binary Numbers WS ](./4)
-5. [(5/12) Handmade Computer(DIWO Full Adder)](./5)
-6. [(5/19) Software and Algorithm - Let's try using Arduino](./6)
-7. [(5/26) Considering Inputs (Make Unreasonable Mouse)](./7)
-8. [(6/2) Considering Inputs 2 - Combining Processing and Arduino, OOP (PONG for One)](./8)
-9. [(6/9) Considering Outputs - Generating Sound with Arduino](./9)
-10. (6/16) Cartesian Robot and Digital Fabrication (3D Printer and G-code Hack)
-11. (6/23) Studio Work 1. Consultation
-12. (6/30) Studio Work 2. Work
-13. (7/7) Studio Work 3. Supplementary lessons according to the works
-14. (7/14) Exhibition of the final assignments
-15. (7/21) Review and summary of presentations
+1. [(4/12) Introduction Non-electrical Computing/Conditional Design](./1)
+2. [(4/19) Introduction to Electronics De-instrumentation (Victorian Oscillator)](./2)
+3. [(4/26) Paper Circuit and Logic Circuit](./3) 
+4. [(5/10) Binary Card Game](./4)
+5. [(5/17) Handmade Computer (Total Adder Made by Everyone)](./5)
+6. [(5/24) Software and Algorithms - Using Arduino](./6)
+7. [(5/31) Akihabara Tour](./7)
+8. [(6/7) Thinking about Input (making an absurd mouse)](./8)
+9. [(6/14) Thinking about Input 2 - Connecting Processing and Arduino, Object Oriented Programming (PONG for one person)](./9)
+10. [(6/21) Thinking on Output - Audio Programming with Arduino](./10)
+11. [(6/28) Studio Work Consultation 1](./11)
+12. [(7/5) Digital Fabrication: Handcrafting an Interface](./12)
+13. [(7/12)  Studio Work Consultation 2](./13)
+14. (7/19) Installation for an exhibition of the Assignment Presentations
+15. (7/25) Removal of the Exhibition, Review of Presentations
+
+Translated with www.DeepL.com/Translator (free version)
 
 
 ## Reference Books
