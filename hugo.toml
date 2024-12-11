@@ -1,9 +1,10 @@
+
 baseURL = "https://teach.matsuuratomoya.com"
 languageCode = "ja"
 defaultContentLanguage = 'ja'
 title = "松浦知也 授業資料"
-theme = 'book'
 publishDir = "public"
+contentDir = 'content'
 [markup]
 [markup.goldmark.renderer]
   unsafe = true
@@ -11,7 +12,6 @@ publishDir = "public"
 [markup.tableOfContents]
   startLevel = 1
   
-contentDir = 'content'
 [languages]
 [languages.ja]
   languageName = 'Japanese'
@@ -40,13 +40,14 @@ enableGitInfo = true
 
 # (Optional) Theme is intended for documentation use, therefore it doesn't render taxonomy.
 # You can remove related files with config below
-disableKinds = ['taxonomy', 'taxonomyTerm']
+disableKinds = ['taxonomy']
   
 [params]
   # ogp
   description = "松浦知也の授業資料のWebサイトです。"
   images = ["ogp.png"]
   title = "松浦知也 授業資料 / teach.matsuuratomoya.com"
+  BookTheme = 'auto'
 
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
@@ -73,7 +74,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Path must point to 'content' directory of repo.
   BookEditPath = 'tree/master'
-  
+  BookCommitPath = 'commit'
   # (Optional, default January 2, 2006) Configure the date format used on the pages
   # - In git information
   # - In blog posts
@@ -88,10 +89,17 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   # By default partals/docs/comments.html includes Disqus template
   # See https://gohugo.io/content-management/comments/#configure-disqus
   # Can be overwritten by same param in page frontmatter
-  BookComments = true
+  BookComments = false
 
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
   # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
   # Theme will print warning if page referenced in markdown does not exists.
   BookPortableLinks = true
+
+[[module.imports]]
+path = "github.com/KKKZOZ/hugo-admonitions"
+[[module.imports]]
+path = 'github.com/alex-shpak/hugo-book'
+[[module.imports]]
+path = 'github.com/hugomods/icons/vendors/font-awesome'

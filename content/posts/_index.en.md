@@ -4,4 +4,5 @@ menu:
     name: notes
     weight: 5
 title: Notes
+bookHidden: true
 ---
