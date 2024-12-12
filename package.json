@@ -1,14 +1,23 @@
 {
-  "name": "teach-matsuuratomoya-com",
-  "version": "1.0.0",
+  "author": "",
+  "comments": {
+    "dependencies": {
+      "deepl-node": "project",
+      "micromorph": "github.com/tomoyanonymous/hugo-micromorph"
+    },
+    "devDependencies": {}
+  },
+  "dependencies": {
+    "deepl-node": "^1.11.0",
+    "micromorph": "^0.4.5"
+  },
   "description": "[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+  "devDependencies": {},
+  "license": "ISC",
   "main": "translate.js",
+  "name": "teach-matsuuratomoya-com",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "deepl-node": "^1.11.0"
-  }
+  "version": "1.0.0"
 }

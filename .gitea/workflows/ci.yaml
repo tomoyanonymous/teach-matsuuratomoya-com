@@ -12,20 +12,25 @@ jobs:
       - run: git config --global core.quotepath false
       - name: Install apt packages
         run: apt update && apt install -y rsync
-      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)  
           fetch-depth: 0
       - uses: https://github.com/actions/setup-go@v4
         with:
-          go-version: '^1.20'
+          go-version: '^1.23'
       - name: Setup Hugo
         uses: https://github.com/peaceiris/actions-hugo@v2
         with:
           hugo-version: "latest"
           extended: true
+      - name: Setup Hugo modules
+        run: hugo mod get -u
+      - name: Setup Hugo npm modules
+        run: hugo mod npm pack
+      - run: npm install
       - name: Run Hugo
-        run: hugo --minify
+        run: hugo --gc --minify
       # - name: upload artifacs
       #   uses: https://github.com/actions/upload-artifact@v3
       #   with: 
